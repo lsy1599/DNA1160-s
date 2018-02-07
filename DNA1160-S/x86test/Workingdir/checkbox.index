@@ -1,0 +1,20 @@
+0, 1, 1, 1, USB
+0, 0, 0, 0, Memory
+0, 1, 1, 1, SwitchButton
+0, 1, 1, 1, CheckRTC
+0, 1, 1, 1, WriteMAC
+0, 1, 1, 1, Network
+0, 0, 0, 0, HWVersion
+0, 0, 0, 0, Fan
+0, 0, 0, 0, VGA
+0, 0, 0, 0, Console
+
+0, 1, 1, 1, ResetButton
+0, 0, 0, 0, CFCard
+0, 0, 0, 0, PCIE
+0, 1, 1, 1, HWMonitor
+0, 0, 0, 0, ByPass
+
+0, 0, 0, 0, Buzzer
+0, 1, 1, 1, SetRTC
+0, 1, 1, 1, SATA

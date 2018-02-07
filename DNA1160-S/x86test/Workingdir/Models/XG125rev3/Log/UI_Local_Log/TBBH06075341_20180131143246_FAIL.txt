@@ -1,0 +1,49 @@
+
+
+20180131143246
+20180131143439
+FAIL
+NLDF
+;0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:XG125rev3
+Model:XG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-01-31 14:34:00
+Model:XG125rev3
+=====TEST:USB=====
+sfdisk -s|grep /dev/|grep -v lv|awk -F':' '{print $1}'
+/dev/sda
+/dev/sdb
+/dev/sdc
+/ $
+Not enough USB port found,lost usb device
+sfdisk -s|grep /dev/|grep -v lv|awk -F':' '{print $1}'
+/dev/sda
+/dev/sdb
+/dev/sdc
+/ $
+Not enough USB port found,lost usb device
+sfdisk -s|grep /dev/|grep -v lv|awk -F':' '{print $1}'
+/dev/sda
+/dev/sdb
+/dev/sdc
+/ $
+Date:2018-01-31 14:34:09
+Model:XG125rev3
+=====TEST:USB=====
+sfdisk -s|grep /dev/|grep -v lv|awk -F':' '{print $1}'
+/dev/sda
+/dev/sdb
+/dev/sdc
+/ $
+Not enough USB port found,lost usb device
+No USB devices are inserted!
+RESULT: USB FAIL
+Date:2018-01-31 14:34:38
+Total test time : 112 seconds.

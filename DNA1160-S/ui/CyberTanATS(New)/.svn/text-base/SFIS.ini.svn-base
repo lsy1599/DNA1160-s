@@ -1,0 +1,15 @@
+# For SFIS.dll
+[SFIS]
+ComPort= COM4
+BaudRate= 9600
+CommTimeOuts= 2
+nComportWaitTime = 20
+FW Version = FV1
+Station Number = -TXRX-----01
+
+[Dynamic_Item]
+nInputTimes = 2
+bInputPingCode = 0
+bWrite_PingCode=0
+bWrite_EouKey=0
+

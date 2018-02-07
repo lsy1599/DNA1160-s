@@ -1,0 +1,61 @@
+
+
+20180131134447
+20180131134535
+PASS
+
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG135Wrev3
+Model:SG135Wrev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-01-31 13:45:33
+Model:SG135Wrev3
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2 &
+[1] 240
+/ $
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+killall -9 cat
+/ $
+-/bin/sh: line 34:   241 Killed                  cat /dev/ttyUSB2
+[1]+  Done(137)               echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2
+IMEI:460028272090036
+ls
+[1;34mbin[0m      [1;34metc[0m      [1;36minit[0m     [1;34mlib64[0m    [1;34mmnt[0m      [1;34mroot[0m     [1;34msys[0m      [1;34musr[0m
+[1;34mdev[0m      [1;34mhome[0m     [1;36mlib[0m      [1;36mlinuxrc[0m  [1;34mproc[0m     [1;34msbin[0m     [1;34mtmp[0m      [1;34mvar[0m
+/ $
+RESULT: PCIE PASS
+Date:2018-01-31 13:45:35
+Total test time : 47 seconds.

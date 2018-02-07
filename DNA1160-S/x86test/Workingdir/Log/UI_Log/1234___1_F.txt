@@ -1,0 +1,21 @@
+請插入待測裝置...
+@@@
+
+/ $
+/ $
+@@@@@@@@@@@@@@@@@@@@@@@
+
+/ $
+/ $
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-04-18 14:27:27
+=====TEST:LED=====
+POWER LED FAIL!
+Date:2017-04-18 14:27:35
+=====TEST:LED=====
+POWER LED FAIL!
+RESULT: LED FAIL
+Date:2017-04-18 14:27:36
+Total test time : 9 seconds.
+測試已完成，請更換待測裝置!!

@@ -1,0 +1,21 @@
+#define COMM_DETECTED				(WM_USER + 1)
+#define MSG_TEST_START				(WM_USER + 2)
+#define MSG_SHOW_MESSAGE			(WM_USER + 3)
+#define MSG_TEST_END				(WM_USER + 4)			
+#define MSG_SHOW_GOLDEN				(WM_USER + 5)
+#define MSG_SET_ITEM_STATUS			(WM_USER + 6)
+#define MSG_SET_GOLDEN_ITEM			(WM_USER + 7)
+#define MSG_SHOW_ACT_MESSAGE		(WM_USER + 8)
+#define MSG_SEND_LOG_MESSAGE		(WM_USER + 9)
+#define MSG_SET_TEST_STATUS			(WM_USER + 10)
+#define MSG_DELETE_CLASS            (WM_USER + 11)
+#define MSG_FT_PT_MESSAGE			(WM_USER + 12)
+#define MSG_SHOW_MAC_BEGIN			(WM_USER + 13)
+#define MSG_SHOW_MAC_END			(WM_USER + 14)
+
+#define MSG_ENABLE_TEST_BUTTON		(WM_USER + 19)
+#define MSG_ENABLE_LABLE_INPUT		(WM_USER + 20)
+#define MSG_SEND_MESLOG_MESSAGE		(WM_USER + 21)
+#define MSG_SHOW_MODEL          (WM_USER+30)
+
+

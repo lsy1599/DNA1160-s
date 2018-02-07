@@ -1,0 +1,62 @@
+
+
+20180130164955
+20180130165043
+FAIL
+TEMP
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG135Wrev3
+Model:SG135Wrev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-01-30 16:50:40
+Model:SG135Wrev3
+=====TEST:WriteI211=====
+eeupdate64e /NIC=1 /INVMUPDATE /FILE=/usr/share/I211_DNB1160.txt
+[H[J
+Using: Intel (R) PRO Network Connections SDK v2.24.20
+EEUPDATE v5.24.20.03
+Copyright (C) 1995 - 2014 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+Only /INVM* and /MAC commands are valid for this adapter.
+Update INVM content ... Verify autoload configuration ...
+Error code - 0x11 : INVM function called with wrong parameter.
+NOT done !
+NIC1 fail
+Date:2018-01-30 16:50:43
+Model:SG135Wrev3
+=====TEST:WriteI211=====
+eeupdate64e /NIC=1 /INVMUPDATE /FILE=/usr/share/I211_DNB1160.txt
+[H[J
+Using: Intel (R) PRO Network Connections SDK v2.24.20
+EEUPDATE v5.24.20.03
+Copyright (C) 1995 - 2014 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+Only /INVM* and /MAC commands are valid for this adapter.
+Update INVM content ... Verify autoload configuration ...
+Error code - 0x11 : INVM function called with wrong parameter.
+NOT done !
+NIC1 fail
+RESULT: WriteI211 FAIL
+Date:2018-01-30 16:50:43
+Total test time : 48 seconds.

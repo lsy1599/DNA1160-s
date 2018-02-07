@@ -1,0 +1,6 @@
+DATE_TIME	DUT_SN	DUT_MAC	SpecialKey1	SpecialKey2	ERROR_CODE	RESULT	HWMonitor_Result	SetRTC_Result	WriteI211_Result	WriteMAC_Result	CheckRTC_Result	CheckMAC_Result	HDMI_Result	PCIE_Result	CheckCPLD_Result	
+2017/12/28-11:23:12	'TBBH06075341'	'0010F35F0781'	'0010F35F0789'	''		FAIL										
+DATE_TIME	DUT_SN	DUT_MAC	SpecialKey1	SpecialKey2	ERROR_CODE	RESULT	HWMonitor_Result	SetRTC_Result	WriteI211_Result	WriteMAC_Result	CheckRTC_Result	CheckMAC_Result	HDMI_Result	PCIE_Result	CheckCPLD_Result	
+2017/12/28-11:26:19	'TBBH06075341'	'0010F35F0781'	'0010F35F0789'	''		FAIL										
+DATE_TIME	DUT_SN	DUT_MAC	SpecialKey1	SpecialKey2	ERROR_CODE	RESULT	HWMonitor_Result	SetRTC_Result	WriteI211_Result	WriteMAC_Result	CheckRTC_Result	CheckMAC_Result	HDMI_Result	PCIE_Result	CheckCPLD_Result	
+2017/12/28-11:31:09	'TBBH06075341'	'0010F35F0781'	'0010F35F0789'	''	HWMF	FAIL	FAIL									

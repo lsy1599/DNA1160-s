@@ -1,0 +1,32 @@
+請插入待測裝置...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+RESULT: Fan PASS
+Date:2017-03-17 09:44:44
+start to  write Plog
+C:\Users\kathy\Desktop\x86test\Workingdir\Models\CE100\0000_P
+write Plog OK
+Total test time : 66 seconds.
+測試已完成，請更換待測裝置!!

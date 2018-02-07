@@ -1,0 +1,61 @@
+; File name         : MFGATS_FTFC.ini
+; File description  : Configuration file for FTFC test. 
+;                     Includes: 1. Switch
+;                               2. USB
+;				3. ADSL
+;				4. SESButton
+;                               5. WPSButton
+;				6. FullLED
+;                               7. Reupdate
+;				8. Final Check
+; Modifier          : Kaung-Hsin Wan
+; Last updated      : 2008-11-10
+; Product           : WRT160NV3
+; Created by TE team
+; Copyright(c) CyberTAN corporation. TE Dept.
+;==================================================================
+[Configuration]
+BuildGDEnable =0
+RFDisable = 0
+DutIP = 192.168.1.1
+NetCardPV = 14E4
+RelayEnable = 0
+ComPortNo=COM1  
+[TEST_ITEM]
+TEST1 = RouterSwitch
+;TEST2 = USB
+;TEST3 = ADSL
+;TEST4 = SESButton
+;TEST5 = WPSButton
+;TEST6 = FullLED
+;TEST7 = Reupdate
+TEST8 = FinalCheck
+
+;==================== Switch Test ====================
+[RouterSwitch]
+NIC1IP = 192.168.1.101
+NIC2IP = 192.168.1.102
+NIC3IP = 192.168.1.103
+NIC4IP = 192.168.1.104
+WANIP = 192.168.15.1
+SwitchWaitTime = 5
+WANWaitTime = 5
+
+;==================== WPSButton Test ====================
+[WPSButton]
+WPSWaitTime = 30
+
+;==================== Write Item ====================
+[Reupdate]
+WriteMACEnable = 1
+WriteSNEnable = 1
+WriteHomeIDEnable = 0
+WritePinCodeEnable = 1
+CountryCode = US
+LanguageCode =EN
+
+;==================== Final Check ====================
+[FinalCheck]
+CheckSN = 1
+CheckPinCode = 1
+DefaultWaitTime=20

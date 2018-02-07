@@ -1,0 +1,27 @@
+#ifdef CYGPIB_EXPORTS
+#define CYSFIS_API __declspec(dllexport)
+#else
+#define CYSFIS_API __declspec(dllimport)
+#endif
+
+
+typedef struct _SFIS_PM
+{
+	char				czSN[26];
+	char				czPN[21];
+	char				czMAC[13];
+	char				czSSN1[26];
+	char				czSSN2[36];     //pSFIS返回值
+	char				czFW[13];
+	char				czSta[13];
+	char				czEC[5];
+	char				czEND[4];
+	char				czResult[5];
+} SFIS_PM;
+
+
+
+#pragma comment(lib,"SFIS")
+	CYSFIS_API int			InitSFIS(char *errMsg); // return(0=error    1=OK    returnMsg=為錯誤返回信息）
+	CYSFIS_API int			DetSFISmsg(struct _SFIS_PM* pSFIS,char* recvBuffer); // return (0=error   1=OK   2= SFISTimeOut   3=SFISERROR  4=SFISPASS   recvBuffer=返回信息）
+	CYSFIS_API int			SendMsgSFIS(BOOL nResult,char FW[13],char EC[5],struct _SFIS_PM* pSFIS,char* recvBuffer); //return (0=error  1=ok    EC=error code    nResult=TRUE/FALSE(傳Dut測試結果PASS=TRUE/FAIL=FALSE)  recvBuffer= 返回信息)

@@ -1,0 +1,471 @@
+PT
+20170317094337
+20170317094444
+PASS
+
+001122334450
+DETAIL
+Computer Name:NCSS
+Local Log Path:C:\Users\kathy\Desktop\x86test\Workingdir\Log\CE100\PT
+’˝‘⁄Ãé¿ÌDLL≥ı º≥Ã–Ú.
+’à≤Â»Î¥˝úy—b÷√...
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+RESULT: Fan PASS
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+RESULT: Fan PASS
+Date:2017-03-17 09:44:44
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+RESULT: Fan PASS
+Date:2017-03-17 09:44:44
+start to  write Plog
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+RESULT: Fan PASS
+Date:2017-03-17 09:44:44
+start to  write Plog
+C:\Users\kathy\Desktop\x86test\Workingdir\Models\CE100\0000_P
+’à≤Â»Î¥˝úy—b÷√...
+[   73.239802] random: crng init done
+@@@@@@@@@@@@@@@@@@@@@@@
+[   73.239802] random: crng init done
+
+&&&&&&&&&&&&&&&&&&&&&&
+/ $
+Date:2017-03-17 09:44:35
+=====TEST:LED=====
+RESULT: LED PASS
+Date:2017-03-17 09:44:41
+Date:2017-03-17 09:44:41
+=====TEST:Fan=====
+CE100_NCT6776F 1 40
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 60
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 90
+======= NCT6776F Info(Begin) =======
+/ $
+CE100_NCT6776F 1 50
+======= NCT6776F Info(Begin) =======
+/ $
+RESULT: Fan PASS
+Date:2017-03-17 09:44:44
+start to  write Plog
+C:\Users\kathy\Desktop\x86test\Workingdir\Models\CE100\0000_P
+write Plog OK

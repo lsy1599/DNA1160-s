@@ -1,0 +1,21 @@
+Please insert DUT...
+/ $
+DllVersion:1.0.0.10
+Date:2018-01-03 15:43:23
+Model:SG135Wrev3
+=====TEST:SetRTC=====
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+System Time:3 01 03 07:43:23 2018
+date -s 2018.01.03-07:43:23
+Wed Jan  3 07:43:23 UTC 2018
+/ $
+hwclock -w
+/ $
+hwclock
+Wed Jan  3 07:43:23 2018  0.000000 seconds
+/ $
+Time Interval:0 s
+RESULT: SetRTC PASS
+Date:2018-01-03 15:43:23
+Total test time : 11 seconds.
+Test complete£¬please change a new DUT!!

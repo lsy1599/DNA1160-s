@@ -1,0 +1,454 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Traditional, Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MessageBox DIALOGEX 0, 0, 288, 100
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "MyMessageBox"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC_SHOWTEST,7,6,274,71
+    PUSHBUTTON      "­«¸Õ",IDC_BUTTON_RETRY,61,79,50,14
+    PUSHBUTTON      "¨ú®ø",IDC_BUTTON_CANCEL,180,79,50,14
+    PUSHBUTTON      "½T©w",IDC_BUTTON_OK,121,79,50,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NexComATS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "NexComATS Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_CYBERTANATS_DIALOG DIALOGEX 0, 0, 586, 447
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_APPWINDOW
+CAPTION "NexComATS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDTEST,7,386,123,54
+    PUSHBUTTON      "HelpSetting",IDC_BUTTON_HELP,527,301,50,14
+    GROUPBOX        "Function Test Item List",IDC_STATIC,7,7,123,296,BS_CENTER | BS_FLAT
+    CTEXT           " ",IDC_LAB_TEST_STATUS,7,330,123,51,SS_CENTERIMAGE
+    LTEXT           "Function Test Item 1",IDC_TESTITEM_1,14,15,109,8
+    LTEXT           "Function Test Item 2",IDC_TESTITEM_2,14,23,109,8
+    LTEXT           "Function Test Item 3",IDC_TESTITEM_3,14,33,109,8
+    LTEXT           "Function Test Item 4",IDC_TESTITEM_4,14,41,109,8
+    LTEXT           "Function Test Item 5",IDC_TESTITEM_5,14,50,109,8
+    LTEXT           "Function Test Item 6",IDC_TESTITEM_6,14,60,109,8
+    LTEXT           "Function Test Item 7",IDC_TESTITEM_7,14,68,109,8
+    LTEXT           "Function Test Item 8",IDC_TESTITEM_8,14,78,109,8
+    LTEXT           "Function Test Item 9",IDC_TESTITEM_9,14,87,109,8
+    LTEXT           "Function Test Item 10",IDC_TESTITEM_10,14,95,109,8
+    LTEXT           "Function Test Item 11",IDC_TESTITEM_11,14,105,109,8
+    LTEXT           "Function Test Item 12",IDC_TESTITEM_12,14,113,109,8
+    LTEXT           "Function Test Item 13",IDC_TESTITEM_13,14,122,109,8
+    LTEXT           "Function Test Item 14",IDC_TESTITEM_14,14,132,109,8
+    LTEXT           "Function Test Item 15",IDC_TESTITEM_15,14,140,109,8
+    LTEXT           "Function Test Item 16",IDC_TESTITEM_16,14,150,109,8
+    LTEXT           "Function Test Item 17",IDC_TESTITEM_17,14,159,109,8
+    LTEXT           "Function Test Item 18",IDC_TESTITEM_18,14,167,109,8
+    LTEXT           "Function Test Item 19",IDC_TESTITEM_19,14,177,109,8
+    LTEXT           "Function Test Item 20",IDC_TESTITEM_20,14,185,109,8
+    LTEXT           "Function Test Item 21",IDC_TESTITEM_21,14,194,109,8
+    LTEXT           "Function Test Item 22",IDC_TESTITEM_22,14,204,109,8
+    LTEXT           "Function Test Item 23",IDC_TESTITEM_23,14,212,109,8
+    LTEXT           "Function Test Item 24",IDC_TESTITEM_24,14,222,109,8
+    LTEXT           "Function Test Item 25",IDC_TESTITEM_25,14,231,109,8
+    LTEXT           "Function Test Item 26",IDC_TESTITEM_26,14,241,109,8
+    LTEXT           "Function Test Item 27",IDC_TESTITEM_27,14,250,109,8
+    LTEXT           "Function Test Item 28",IDC_TESTITEM_28,14,260,109,8
+    LTEXT           "Function Test Item 29",IDC_TESTITEM_29,14,270,109,8
+    CONTROL         "Function Test Item 30",IDC_TESTITEM_30,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,14,279,109,8
+    LTEXT           "PASS",IDC_STATIC,154,304,16,8
+    GROUPBOX        "Process Messages",IDC_STATIC,138,3,439,317,BS_CENTER
+    EDITTEXT        IDC_UI_MSG,154,14,423,287,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | WS_VSCROLL | WS_HSCROLL | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    LTEXT           "Version",IDC_APP_VERSION,538,430,37,10
+    CTEXT           "",IDC_SHOW_ACT_MESSAGE,140,329,437,26
+    GROUPBOX        "Action Message",IDC_STATIC,138,323,439,37,BS_CENTER
+    LTEXT           "ATS UI Version",IDC_STATIC,484,430,48,10
+    LTEXT           " ",IDC_DLL_INFO,148,373,421,11
+    GROUPBOX        " DLL Info",IDC_STATIC,137,364,440,23,BS_CENTER
+    LTEXT           "FAIL",IDC_STATIC,301,304,16,8
+    LTEXT           "TOTAL",IDC_STATIC,413,304,22,8
+    RTEXT           "",IDC_PASS_COUNT,174,303,60,11,WS_BORDER
+    RTEXT           "",IDC_FAIL_COUNT,321,303,60,11,WS_BORDER
+    RTEXT           "",IDC_TOTAL_COUNT,439,303,60,11,WS_BORDER
+    GROUPBOX        "Log Upload Info",IDC_STATIC,138,393,439,36,BS_CENTER
+    RTEXT           "",IDC_Log_Time,454,401,121,10
+    LTEXT           "",IDC_Log_Server,142,401,308,11
+    CTEXT           "",IDC_SFIS_MEG,138,402,427,23,NOT WS_VISIBLE
+    LTEXT           "",IDC_UPLOAD_STATUS,142,414,282,12
+    LTEXT           "Computer Name:",IDC_Computer_Name,138,431,61,9
+    LTEXT           "",IDC_Computer_Name1,195,430,102,10
+    LTEXT           "IQ¨ì´Á³Ñ§E21¤Ñ",IDC_IQExpire,237,304,60,9
+    CTEXT           "¨ì´Á",IDC_IQFlash,384,303,27,11
+    PUSHBUTTON      "Local UI Log",IDC_BUTTON_HELP2,15,308,50,14
+    PUSHBUTTON      "UI Log",IDC_BUTTON_HELP3,73,308,50,14
+END
+
+IDD_DLG_MAC DIALOGEX 0, 0, 159, 109
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Key"
+FONT 12, "Courier New", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_SN,34,8,114,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MAC,34,24,114,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SSN1,34,40,114,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,43,79,38,18
+    PUSHBUTTON      "Cancel",IDCANCEL,94,79,38,18
+    CONTROL         "MACBeg",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,10,25,25,8
+    LTEXT           "SN:",IDC_STATIC,14,9,15,8
+    LTEXT           "MACEnd",IDC_STATIC,10,41,23,8
+    EDITTEXT        IDC_EDIT_SSN2,34,56,114,12,ES_AUTOHSCROLL
+    LTEXT           "SSN2:",IDC_STATIC,14,58,18,8
+END
+
+IDD_DLG_SFISOFF DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_SFISOFF,41,57,104,15,ES_CENTER | ES_PASSWORD | ES_AUTOHSCROLL
+    CTEXT           "SFIS¬°Ãö³¬ª¬ºA¡A½Ð¿é¤J±K½X",IDC_STATIC,30,25,130,18
+END
+
+IDD_DLG_PASSWORD DIALOGEX 0, 0, 154, 76
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDC_BTNCancel,114,57,32,12
+    EDITTEXT        IDC_RETEST_PASSWORD,39,33,64,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Super-User Please Input Password",IDC_DISPLAY_PROMPT,15,19,124,11,0,WS_EX_TRANSPARENT
+    LTEXT           "General User No need to input",IDC_DISPLAY_PASSWORD,11,52,101,8
+    DEFPUSHBUTTON   "OK",IDOK,113,36,33,14
+END
+
+IDD_DIALOG_SETTING DIALOGEX 0, 0, 203, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setting&Help"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,117,96,50,14
+    PUSHBUTTON      "OpenUILOG",IDC_BUTTON_UI,7,7,79,14
+    PUSHBUTTON      "Open ErrorCode File™n",IDC_BUTTON_ERROR,7,30,80,14
+    PUSHBUTTON      "Open Test Indicate Doc",IDC_BUTTON_HELP,7,52,81,14
+    PUSHBUTTON      "OpenATSCfg.ini",IDC_BUTTON_ATSCFG,113,7,77,14
+    PUSHBUTTON      "Open Config File",IDC_BUTTON_SETTING,114,30,75,14
+    PUSHBUTTON      "ReInit Test System",IDC_BUTTON_RESTART,114,55,76,14
+    DEFPUSHBUTTON   "Yes",IDOK,37,96,50,14
+    PUSHBUTTON      "Efficiency Statistic",IDC_BUTTON_EFFICIENCY,7,75,80,14
+    PUSHBUTTON      "Test Mode",IDC_BTNTestMode,114,76,75,13
+END
+
+IDD_OPNumber DIALOGEX 0, 0, 212, 106
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "¾Þ§@Åv­­"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "½Ð¿é¤J¾Þ§@¤u¸¹",IDC_Prompt,29,13,144,20
+    EDITTEXT        IDC_EditOPNum,70,39,104,24,ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "¤u¸¹",IDC_StaUser,33,45,29,15
+    CTEXT           "¯¸¦ì",IDC_StaPasswd,33,74,30,18
+    EDITTEXT        IDC_EditPasswd,70,68,105,24,ES_CENTER | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MessageBox, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CYBERTANATS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 577
+        VERTGUIDE, 130
+        VERTGUIDE, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 440
+    END
+
+    IDD_DLG_MAC, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 148
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_DLG_SFISOFF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_DLG_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_DIALOG_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_OPNumber, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\CyberTanATS.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CyberTanATS.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "NexCom"
+            VALUE "FileDescription", "NexCom TE Dep."
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "NexComATS.exe"
+            VALUE "LegalCopyright", "(c) <Nexcom>.  All rights reserved."
+            VALUE "LegalTrademarks", "20140410"
+            VALUE "OriginalFilename", "NexComATS.exe"
+            VALUE "ProductName", "MFG ATS"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_OPNumber AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CYBERTANATS_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About NexComATS..."
+END
+
+#endif    // Chinese (Traditional, Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Model_Select DIALOGEX 0, 0, 309, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ModelSelect"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "OK",IDC_BtnOk,127,126,60,25
+    CTEXT           "Please Choose your Model Name",IDC_StaModel,56,33,208,23
+    COMBOBOX        IDC_ModelComb,43,67,226,104,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_Model_Select, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_Model_Select AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\CyberTanATS.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

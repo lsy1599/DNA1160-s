@@ -1,0 +1,77 @@
+
+
+20180205134347
+20180205134434
+FAIL
+USBF
+;;
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-05 13:44:32
+Model:SG125rev3
+=====TEST:USB=====
+fdisk -l |grep -v Disk | grep /dev | awk -F ' ' '{print($1)}'
+/dev/sdb1
+/dev/sdd1
+smartctl -i /dev/sdb1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               General
+Product:              USB Flash Disk
+Revision:             1100
+User Capacity:        8,017,412,096 bytes [8.01 GB]
+Logical block size:   512 bytes
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+smartctl -i /dev/sdd1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               VendorCo
+Product:              ProductCode
+Revision:             2.00
+User Capacity:        15,938,355,200 bytes [15.9 GB]
+Logical block size:   512 bytes
+scsiModePageOffset: response length too short, resp_len=4 offset=4 bd_len=0
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+b num are:
+Not Enough USB test pass
+Date:2018-02-05 13:44:33
+Model:SG125rev3
+=====TEST:USB=====
+fdisk -l |grep -v Disk | grep /dev | awk -F ' ' '{print($1)}'
+/dev/sdb1
+/dev/sdd1
+smartctl -i /dev/sdb1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               General
+Product:              USB Flash Disk
+Revision:             1100
+User Capacity:        8,017,412,096 bytes [8.01 GB]
+Logical block size:   512 bytes
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+smartctl -i /dev/sdd1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               VendorCo
+Product:              ProductCode
+Revision:             2.00
+User Capacity:        15,938,355,200 bytes [15.9 GB]
+Logical block size:   512 bytes
+scsiModePageOffset: response length too short, resp_len=4 offset=4 bd_len=0
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+b num are:
+Not Enough USB test pass
+RESULT: USB FAIL
+Date:2018-02-05 13:44:33
+Total test time : 47 seconds.

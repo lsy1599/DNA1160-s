@@ -1,0 +1,23 @@
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+Date:2017-11-27 15:29:39
+=====TEST:SetRTC=====
+System Time:1 11 27 07:29:39 2017
+date -s 2017.11.27-07:29:39
+Mon Nov 27 07:29:39 UTC 2017
+/ $
+hwclock -w
+/ $
+hwclock
+Mon Nov 27 07:29:39 2017  0.000000 seconds
+/ $
+Time Interval:0 s
+RESULT: SetRTC PASS
+Date:2017-11-27 15:29:39
+Total test time : 11 seconds.
+Test complete£¬please change a new DUT!!

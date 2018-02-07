@@ -1,0 +1,60 @@
+[DutConfig]
+ProductName = WHR-G301N 
+EmbedIP = 
+BootTime = 20
+
+[InputKey]
+InputSN	= 0
+CheckSN = 0
+SN_Length = 20
+
+InputMac = 0
+AutoMac = 0
+CheckMac = 0
+MacStart =0200dd000006
+MacEnd   = 0200ddffffff
+
+InputSSN1 = 0
+InputSSN2 = 0
+
+[SFIS]
+SFISEab = 0
+SFIS_Retry_Eab = 0
+DllName = SFIS.dll
+DllVersion = 3.10.9.3
+
+[DLL]
+StationName=RC1
+DllName = MFGATS_FTFC
+DllVersion = 2.10.0.36
+
+[RetestAlarm]
+AlarmMessage = 1)老子大很島大很島\n 2)天天大屁股天天\n大屁股天\n天大屁股天天大屁股\n 3)聯係電話: 13816766067\n 大叔大\n齊全齊全\n
+ConfirmPassword = 123456
+TotalRetestCounter = 0
+RetestRateThreshold = 0
+
+[TECONFIG]
+FTPEab = 0
+AutoTest = 0
+DEBUG_MSG = 1
+
+;配合SFIS使用, 掃完條碼後, 押空白鍵才開始測試
+StartTestOnButton = 0
+;測試完畢後, 顯示DECT
+ShowDect = 0
+;把 UI 的內容存為log
+UiLog = 1
+
+LoopCountEab = 0
+LoopCounts = 40
+LogByResult = 1
+LogAll = 1
+; logfile路徑格式  LogFilePath = C:\TestLog\ 
+;若路徑為空白, 則會儲存在工作目錄 
+LogLocalFilePath = D:\
+LogMappingDriver= Z:\
+LogUploadTime = 14:00,22:00
+
+[DB_Setting]
+Station_Name = RC1

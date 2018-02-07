@@ -1,0 +1,123 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by CyberTanATS.rc
+//
+#define IDM_ABOUTBOX                    0x0010
+#define IDD_ABOUTBOX                    100
+#define IDS_ABOUTBOX                    101
+#define IDD_CYBERTANATS_DIALOG          102
+#define IDR_MAINFRAME                   128
+#define IDD_INPUT_KEY                   129
+#define IDD_DLG_MAC                     129
+#define IDD_DLG_SFISOFF                 133
+#define IDD_MessageBox                  135
+#define IDD_DLG_PASSWORD                136
+#define IDD_DIALOG_SETTING              137
+#define IDD_OPNumber                    138
+#define IDD_Model_Select                139
+#define IDC_UI_MSG                      1005
+#define IDC_APP_VERSION                 1007
+#define IDC_LAB_TEST_STATUS             1008
+#define IDC_EDIT_SN                     1009
+#define IDC_EDIT_MAC                    1010
+#define IDC_EDIT_SSN1                   1011
+#define IDTEST                          1012
+#define IDC_EDIT_SSN2                   1012
+#define IDC_SHOW_ACT_MESSAGE            1014
+#define IDC_DLL_INFO                    1015
+#define IDC_PASS_COUNT                  1021
+#define IDC_FAIL_COUNT                  1022
+#define IDC_TOTAL_COUNT                 1023
+#define IDC_EDIT1                       1026
+#define IDC_EDIT_SFISOFF                1026
+#define IDC_RETEST_PASSWORD             1026
+#define IDC_EditSN                      1026
+#define IDC_EditOPNum                   1026
+#define IDC_Log_Time                    1028
+#define IDC_Log_Server                  1029
+#define IDC_STATIC_SHOWTEST             1030
+#define IDC_Computer_Name               1033
+#define IDC_SFIS_MEG                    1034
+#define IDC_BUTTON_RETRY                1035
+#define IDC_BUTTON_CANCEL               1036
+#define IDC_BUTTON_OK                   1037
+#define IDC_UPLOAD_STATUS               1041
+#define IDC_Computer_Name1              1042
+#define IDC_BUTTON_HELP                 1043
+#define IDC_BUTTON_ATSCFG               1044
+#define IDC_BUTTON_SETTING              1045
+#define IDC_BUTTON_HELP2                1045
+#define IDC_BUTTON_HELP3                1046
+#define IDC_BUTTON_ERROR                1047
+#define IDC_BUTTON_RESTART              1048
+#define IDC_BUTTON_UI                   1049
+#define IDC_DISPLAY_PASSWORD            1050
+#define IDC_DISPLAY_PROMPT              1051
+#define IDC_BUTTON_UNKNOWN              1052
+#define IDC_BUTTON_EFFICIENT            1053
+#define IDC_BUTTON_EFFICIENCY           1053
+#define IDC_IQExpire                    1053
+#define IDC_IQFlash                     1054
+#define IDC_BTNCancel                   1055
+#define IDC_BUTTON1                     1056
+#define IDC_ButtonCancel                1056
+#define IDC_BTNTestMode                 1056
+#define IDC_BtnOk                       1056
+#define IDC_EditMAC                     1057
+#define IDC_EDIT3                       1058
+#define IDC_EditSSN1                    1058
+#define IDC_StaSN                       1059
+#define IDC_StaMAC                      1060
+#define IDC_StaSSN1                     1061
+#define IDC_Prompt                      1062
+#define IDC_EditPasswd                  1063
+#define IDC_StaPasswd                   1064
+#define IDC_StaUser                     1065
+#define IDC_KEY_ERR                     1066
+#define IDC_ModelComb                   1067
+#define IDC_StaModel                    1068
+#define IDC_BUTTON2                     1070
+#define IDC_EDIT2                       1073
+#define IDC_EDIT2_MODEL                 1073
+#define IDC_SHOWSTATE                   1080
+#define IDC_TESTITEM_1                  10001
+#define IDC_TESTITEM_2                  10002
+#define IDC_TESTITEM_3                  10003
+#define IDC_TESTITEM_4                  10004
+#define IDC_TESTITEM_5                  10005
+#define IDC_TESTITEM_6                  10006
+#define IDC_TESTITEM_7                  10007
+#define IDC_TESTITEM_8                  10008
+#define IDC_TESTITEM_9                  10009
+#define IDC_TESTITEM_10                 10010
+#define IDC_TESTITEM_11                 10011
+#define IDC_TESTITEM_12                 10012
+#define IDC_TESTITEM_13                 10013
+#define IDC_TESTITEM_14                 10014
+#define IDC_TESTITEM_15                 10015
+#define IDC_TESTITEM_16                 10016
+#define IDC_TESTITEM_17                 10017
+#define IDC_TESTITEM_18                 10018
+#define IDC_TESTITEM_19                 10019
+#define IDC_TESTITEM_20                 10020
+#define IDC_TESTITEM_21                 10021
+#define IDC_TESTITEM_22                 10022
+#define IDC_TESTITEM_23                 10023
+#define IDC_TESTITEM_24                 10024
+#define IDC_TESTITEM_25                 10025
+#define IDC_TESTITEM_26                 10026
+#define IDC_TESTITEM_27                 10027
+#define IDC_TESTITEM_28                 10028
+#define IDC_TESTITEM_29                 10029
+#define IDC_TESTITEM_30                 10030
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        143
+#define _APS_NEXT_COMMAND_VALUE         32771
+#define _APS_NEXT_CONTROL_VALUE         1074
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

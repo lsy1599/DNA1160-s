@@ -1,0 +1,3 @@
+Please insert DUT...
+Total test time : 1 seconds.
+Test complete£¬please change a new DUT!!

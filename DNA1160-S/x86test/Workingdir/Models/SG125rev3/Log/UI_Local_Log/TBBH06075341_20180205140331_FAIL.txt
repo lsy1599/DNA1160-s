@@ -1,0 +1,18 @@
+
+
+20180205140331
+20180205140414
+FAIL
+
+;;
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+matching device(s) not found.
+COM Open Fail!
+Enter into board linux system mode fail
+Total test time : 43 seconds.

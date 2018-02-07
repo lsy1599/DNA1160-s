@@ -1,0 +1,35 @@
+
+
+20180125194921
+20180125195052
+PASS
+
+;0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+/ $
+Current selected comport:3
+/ $
+DllVersion:1.0.1.12
+Date:2018-01-25 19:49:57
+Model:SG125rev3
+=====TEST:LED=====
+killall -s 9 fio
+/ $
+DNA130S_LED 2
+[DNA130S] CPLD LED set to red constantly.
+[DNA130S] CPLD LED get reg[0xf4]: 0xFF
+[1]+  Killed                  fio -filename=/dev/sda -direct=1 -iodepth=1 -thread -rw=randread -bs=512k -numjobs=8 -runtime=600 -group_reporting -name=nxtest
+/ $
+DNA130S_LED 3
+[DNA130S] CPLD LED set to green constantly.
+[DNA130S] CPLD LED get reg[0xf4]: 0xFF
+/ $
+RESULT: LED PASS
+Date:2018-01-25 19:50:52
+Total test time : 91 seconds.

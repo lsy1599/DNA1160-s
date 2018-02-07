@@ -1,0 +1,44 @@
+
+
+20180202195507
+20180202195621
+FAIL
+HWMF
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG135rev3
+Model:SG135rev3
+DLL initialize complete.
+Please insert DUT...
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-02 19:56:20
+Model:SG135rev3
+=====TEST:HWMonitor=====
+DNA1160S_HWM
+CPU Temperature = 47 C
+VCORE Voltage = 0.864 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+CPU FAN Speed = 0 RPM
+CPU FAN Speed out of range
+Date:2018-02-02 19:56:20
+Model:SG135rev3
+=====TEST:HWMonitor=====
+DNA1160S_HWM
+CPU Temperature = 47 C
+VCORE Voltage = 0.864 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+CPU FAN Speed = 0 RPM
+CPU FAN Speed out of range
+RESULT: HWMonitor FAIL
+Date:2018-02-02 19:56:20
+Total test time : 74 seconds.

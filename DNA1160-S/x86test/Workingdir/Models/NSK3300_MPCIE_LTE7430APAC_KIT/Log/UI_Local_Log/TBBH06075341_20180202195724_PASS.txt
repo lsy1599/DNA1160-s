@@ -1,0 +1,16 @@
+
+
+20180202195724
+20180202195759
+PASS
+
+;
+
+
+DETAIL
+ModelName:NSK3300_MPCIE_LTE7430APAC_KIT
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+Total test time : 35 seconds.

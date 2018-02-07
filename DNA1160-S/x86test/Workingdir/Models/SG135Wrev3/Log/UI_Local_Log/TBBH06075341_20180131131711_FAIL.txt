@@ -1,0 +1,52 @@
+
+
+20180131131711
+20180131131828
+FAIL
+BPCI
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG135Wrev3
+Model:SG135Wrev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-01-31 13:18:24
+Model:SG135Wrev3
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+[   32.495529] GobiNet: 2017-09-05/SWI_2.46
+[   32.499569] usbcore: registered new interface driver GobiNet
+insmod /usr/share/GobiSerial.ko
+[   33.147334] usbcore: registered new interface driver GobiSerial
+[   33.153335] usbserial: USB Serial support registered for GobiSerial
+[   33.160139] GobiSerial 1-3:1.0: GobiSerial converter detected
+[   33.166131] usb 1-3: GobiSerial converter now attached to ttyUSB0
+[   33.172720] GobiSerial 1-3:1.2: GobiSerial converter detected
+[   33.178695] usb 1-3: GobiSerial converter now attached to ttyUSB1
+[   33.185494] GobiSerial 1-3:1.3: GobiSerial converter detected
+[   33.191481] usb 1-3: GobiSerial converter now attached to ttyUSB2
+[   33.197651] GobiSerial: 2017-08-18/SWI_2.29:GobiSerial
+echo AT+CIMI > /dev/ttyUSB2 & && cat /dev/ttyUSB2 & && killall -9 cat
+sh: syntax error near unexpected token `&&'
+Can not find IMEI!
+Date:2018-01-31 13:18:26
+Model:SG135Wrev3
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+echo AT+CIMI > /dev/ttyUSB2 & && cat /dev/ttyUSB2 & && killall -9 cat
+sh: syntax error near unexpected token `&&'
+Can not find IMEI!
+RESULT: PCIE FAIL
+Date:2018-01-31 13:18:27
+Total test time : 77 seconds.

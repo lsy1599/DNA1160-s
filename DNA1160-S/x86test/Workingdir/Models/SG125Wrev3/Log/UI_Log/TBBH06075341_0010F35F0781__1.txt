@@ -1,0 +1,199 @@
+Please insert DUT...
+Com port COM1 founded!
+
+Com port COM1 founded!
+
+Com port COM1 founded!
+
+Com port COM3 founded!
+
+[16;00H                                                                                [17;00H                                                                                [18;00H                                                                                [19;00H                                                                                [20;00H                                                                                [21;00H                                                                                [22;00H                                                                                [23;00H                                                                                [24;00H                                                                               [24;00H[00;01H
+Current selected comport:3
+/ $
+DllVersion:1.0.1.12
+Date:2018-01-19 15:28:23
+Model:SG125Wrev3
+=====TEST:CheckRTC=====
+hwclock
+Fri Jan 19 07:28:23 2018  0.000000 seconds
+/ $
+Time Interval:0 s
+RESULT: CheckRTC PASS
+Date:2018-01-19 15:28:23
+DllVersion:1.0.1.12
+Date:2018-01-19 15:28:23
+Model:SG125Wrev3
+=====TEST:USB=====
+sfdisk -s|grep /dev/|grep -v lv|awk -F':' '{print $1}'
+/dev/sda
+/dev/sdc
+/dev/sdb
+/ $
+smartctl -i /dev/sda
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+=== START OF INFORMATION SECTION ===
+Device Model:     64GB SATA Flash Drive
+Serial Number:    B0717342800000000148
+LU WWN Device Id: 5 dc663a 07bf00148
+Firmware Version: SFDN004E
+User Capacity:    64,023,257,088 bytes [64.0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ACS-2 (minor revision not indicated)
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Fri Jan 19 07:28:23 2018 UTC
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+/ $
+fdisk -l /dev/sda
+Disk /dev/sda: 64.0 GB, 64023257088 bytes
+255 heads, 63 sectors/track, 7783 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Device Boot      Start         End      Blocks  Id System
+/ $
+smartctl -i /dev/sdc
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+/dev/sdc: Unknown USB bridge [0x058f:0x6387 (0x101)]
+Please specify device type with the -d option.
+Use smartctl -h to get a usage summary
+/ $
+fdisk -l /dev/sdc
+Disk /dev/sdc: 16.1 GB, 16106127360 bytes
+64 heads, 32 sectors/track, 15360 cylinders
+Units = cylinders of 2048 * 512 = 1048576 bytes
+Device Boot      Start         End      Blocks  Id System
+/ $
+smartctl -i /dev/sdb
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+/dev/sdb: Unknown USB bridge [0x090c:0x1000 (0x1100)]
+Please specify device type with the -d option.
+Use smartctl -h to get a usage summary
+/ $
+fdisk -l /dev/sdb
+Disk /dev/sdb: 8017 MB, 8017412096 bytes
+5 heads, 56 sectors/track, 55925 cylinders
+Units = cylinders of 280 * 512 = 143360 bytes
+Device Boot      Start         End      Blocks  Id System
+/dev/sdb1   *           8        1792      249856  83 Linux
+/ $
+fdisk -l /dev/sdc
+[   33.627696] random: crng init done
+Disk /dev/sdc: 16.1 GB, 16106127360 bytes
+64 heads, 32 sectors/track, 15360 cylinders
+Units = cylinders of 2048 * 512 = 1048576 bytes
+Device Boot      Start         End      Blocks  Id System
+/ $
+mount "/dev/sdc" /mnt/usb
+/ $
+mount
+rootfs on / type rootfs (rw,size=987460k,nr_inodes=246865)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+/dev/sdc on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/ $
+rm -rf /tmp/test
+/ $
+rm -rf /mnt/usb/test
+/ $
+test -e /mnt/usb/test
+/ $
+echo $?
+1
+/ $
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.352459 seconds, 757.1KB/s
+/ $
+cp -arf /tmp/test /mnt/usb
+/ $
+test -e /mnt/usb/test
+/ $
+echo $?
+0
+/ $
+cp -arf /mnt/usb/test /tmp/test1
+/ $
+test -e /tmp/test1
+/ $
+echo $?
+0
+/ $
+cmp -l /tmp/test /tmp/test1
+/ $
+echo $?
+0
+/ $
+umount /mnt/usb
+/ $
+mount
+rootfs on / type rootfs (rw,size=987460k,nr_inodes=246865)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+/ $
+fdisk -l /dev/sdb
+Disk /dev/sdb: 8017 MB, 8017412096 bytes
+5 heads, 56 sectors/track, 55925 cylinders
+Units = cylinders of 280 * 512 = 143360 bytes
+Device Boot      Start         End      Blocks  Id System
+/dev/sdb1   *           8        1792      249856  83 Linux
+/ $
+mount "/dev/sdb" /mnt/usb
+mount: mounting /dev/sdb on /mnt/usb failed: Device or resource busy
+/ $
+mount
+rootfs on / type rootfs (rw,size=987460k,nr_inodes=246865)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+/ $
+rm -rf /tmp/test
+/ $
+rm -rf /mnt/usb/test
+/ $
+test -e /mnt/usb/test
+/ $
+echo $?
+1
+/ $
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.354498 seconds, 756.0KB/s
+/ $
+cp -arf /tmp/test /mnt/usb
+/ $
+test -e /mnt/usb/test
+/ $
+echo $?
+0
+/ $
+cp -arf /mnt/usb/test /tmp/test1
+/ $
+test -e /tmp/test1
+/ $
+echo $?
+0
+/ $
+cmp -l /tmp/test /tmp/test1
+/ $
+echo $?
+0
+/ $
+umount /mnt/usb
+/ $
+mount
+rootfs on / type rootfs (rw,size=987460k,nr_inodes=246865)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/ $
+RESULT: USB PASS
+Date:2018-01-19 15:28:36
+Total test time : 123 seconds.
+Test complete£¬please change a new DUT!!

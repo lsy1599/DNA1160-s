@@ -1,0 +1,44 @@
+// SfisOffDlg.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "CyberTanATS.h"
+#include "SfisOffDlg.h"
+#include "CyberTanATSDlg.h"
+
+extern ATSCONFIG AtsInfo;
+// SfisOffDlg dialog
+
+IMPLEMENT_DYNAMIC(SfisOffDlg, CDialog)
+
+SfisOffDlg::SfisOffDlg(CWnd* pParent /*=NULL*/)
+	: CDialog(SfisOffDlg::IDD, pParent)
+{
+
+}
+
+SfisOffDlg::~SfisOffDlg()
+{
+}
+
+void SfisOffDlg::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+}
+
+
+BEGIN_MESSAGE_MAP(SfisOffDlg, CDialog)
+	ON_BN_CLICKED(IDOK, &SfisOffDlg::OnBnClickedOk)
+END_MESSAGE_MAP()
+
+
+// SfisOffDlg message handlers
+
+void SfisOffDlg::OnBnClickedOk()
+{
+	CString csPassword;
+
+	CEdit *GetPassword = (CEdit*)GetDlgItem(IDC_EDIT_SFISOFF);
+	GetPassword->GetWindowTextA(AtsInfo.csSFISPassword);
+	OnOK();
+}

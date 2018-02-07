@@ -1,0 +1,31 @@
+
+
+20180125194527
+20180125194746
+FAIL
+LEDF
+;0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+/ $
+Current selected comport:3
+/ $
+DllVersion:1.0.1.12
+Date:2018-01-25 19:46:03
+Model:SG125rev3
+=====TEST:LED=====
+Please plug in the two power cords.
+Please plug in the two power cords.
+Operator errors!
+Date:2018-01-25 19:47:43
+Model:SG125rev3
+=====TEST:LED=====
+POWER_GRE_LED FAIL!
+RESULT: LED FAIL
+Date:2018-01-25 19:47:46
+Total test time : 139 seconds.

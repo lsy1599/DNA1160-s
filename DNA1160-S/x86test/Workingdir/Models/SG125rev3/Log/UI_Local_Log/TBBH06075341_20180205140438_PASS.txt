@@ -1,0 +1,95 @@
+
+
+20180205140438
+20180205140535
+PASS
+
+;;
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-05 14:05:24
+Model:SG125rev3
+=====TEST:USB=====
+fdisk -l |grep -v Disk | grep /dev | awk -F ' ' '{print($1)}'
+/dev/sdb1
+/dev/sdd1
+b num are:
+mount "/dev/sdb1" /mnt/usb
+[11040.702328] EXT4-fs (sdb1): mounting ext3 file system using the ext4 subsystem
+[11040.716806] EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+rm -rf /tmp/test
+rm -rf /mnt/usb/test
+test -e /mnt/usb/test
+echo $?
+1
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.339257 seconds, 764.6KB/s
+cp -arf /tmp/test /mnt/usb
+test -e /mnt/usb/test
+echo $?
+0
+cp -arf /mnt/usb/test /tmp/test1
+test -e /tmp/test1
+echo $?
+0
+cmp -l /tmp/test /tmp/test1
+echo $?
+0
+umount /mnt/usb
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+mount "/dev/sdd1" /mnt/usb
+[11048.703701] FAT-fs (sdd1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/dev/sdd1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+rm -rf /tmp/test
+rm -rf /mnt/usb/test
+test -e /mnt/usb/test
+echo $?
+1
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.337127 seconds, 765.8KB/s
+cp -arf /tmp/test /mnt/usb
+test -e /mnt/usb/test
+echo $?
+0
+cp -arf /mnt/usb/test /tmp/test1
+test -e /tmp/test1
+echo $?
+0
+cmp -l /tmp/test /tmp/test1
+echo $?
+0
+umount /mnt/usb
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+RESULT: USB PASS
+Date:2018-02-05 14:05:35
+Total test time : 57 seconds.

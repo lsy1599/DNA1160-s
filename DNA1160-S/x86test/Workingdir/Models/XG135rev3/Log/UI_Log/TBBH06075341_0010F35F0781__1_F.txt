@@ -1,0 +1,38 @@
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+Date:2017-11-27 15:43:15
+Model:XG135rev3
+=====TEST:SetRTC=====
+System Time:1 11 27 07:43:15 2017
+date -s 2017.11.27-07:43:15
+Mon Nov 27 07:43:15 UTC 2017
+/ $
+hwclock -w
+/ $
+hwclock
+Mon Nov 27 07:43:15 2017  0.000000 seconds
+/ $
+Time Interval:0 s
+RESULT: SetRTC PASS
+Date:2017-11-27 15:43:15
+Date:2017-11-27 15:43:15
+Model:XG135rev3
+=====TEST:LED=====
+Please plug in the two power cords.
+Please plug in the two power cords.
+Operator errors!
+Date:2017-11-27 15:43:22
+Model:XG135rev3
+=====TEST:LED=====
+Please plug in the two power cords.
+Please plug in the two power cords.
+Operator errors!
+RESULT: LED FAIL
+Date:2017-11-27 15:43:24
+Total test time : 20 seconds.
+Test complete£¬please change a new DUT!!

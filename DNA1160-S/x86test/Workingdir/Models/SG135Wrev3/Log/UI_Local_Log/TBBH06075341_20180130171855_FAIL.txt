@@ -1,0 +1,18 @@
+
+
+20180130171855
+20180130172028
+FAIL
+
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG135Wrev3
+Model:SG135Wrev3
+DLL initialize complete.
+Please insert DUT...
+matching device(s) not found.
+COM Open Fail!
+Enter into board linux system mode fail
+Total test time : 92 seconds.

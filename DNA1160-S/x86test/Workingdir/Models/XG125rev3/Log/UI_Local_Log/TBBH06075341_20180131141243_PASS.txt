@@ -1,0 +1,160 @@
+
+
+20180131141243
+20180131141410
+PASS
+
+;0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:XG125rev3
+Model:XG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-01-31 14:13:56
+Model:XG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Wed Jan 31 06:13:55 2018  0.000000 seconds
+Time Interval:-2 s
+RESULT: CheckRTC PASS
+Date:2018-01-31 14:13:57
+DllVersion:1.0.2.12
+Date:2018-01-31 14:13:57
+Model:XG125rev3
+=====TEST:USB=====
+sfdisk -s|grep /dev/|grep -v lv|awk -F':' '{print $1}'
+[   32.549427] random: crng init done
+/dev/sda
+/dev/sdb
+/dev/sdc
+smartctl -i /dev/sda
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+=== START OF INFORMATION SECTION ===
+Device Model:     64GB SATA Flash Drive
+Serial Number:    B0717342800000000148
+LU WWN Device Id: 5 dc663a 07bf00148
+Firmware Version: SFDN004E
+User Capacity:    64,023,257,088 bytes [64.0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ACS-2 (minor revision not indicated)
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Wed Jan 31 06:13:56 2018 UTC
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+fdisk -l /dev/sda
+Disk /dev/sda: 64.0 GB, 64023257088 bytes
+255 heads, 63 sectors/track, 7783 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Device Boot      Start         End      Blocks  Id System
+smartctl -i /dev/sdb
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+/dev/sdb: Unknown USB bridge [0x090c:0x1000 (0x1100)]
+Please specify device type with the -d option.
+Use smartctl -h to get a usage summary
+fdisk -l /dev/sdb
+Disk /dev/sdb: 8017 MB, 8017412096 bytes
+5 heads, 56 sectors/track, 55925 cylinders
+Units = cylinders of 280 * 512 = 143360 bytes
+Device Boot      Start         End      Blocks  Id System
+/dev/sdb1   *           8        1792      249856  83 Linux
+smartctl -i /dev/sdc
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+/dev/sdc: Unknown USB bridge [0xffff:0x5678 (0x200)]
+Please specify device type with the -d option.
+Use smartctl -h to get a usage summary
+fdisk -l /dev/sdc
+Disk /dev/sdc: 15.9 GB, 15938355200 bytes
+256 heads, 63 sectors/track, 1930 cylinders
+Units = cylinders of 16128 * 512 = 8257536 bytes
+Device Boot      Start         End      Blocks  Id System
+/dev/sdc1               1        1931    15564799+ ee EFI GPT
+fdisk -l /dev/sdb
+Disk /dev/sdb: 8017 MB, 8017412096 bytes
+5 heads, 56 sectors/track, 55925 cylinders
+Units = cylinders of 280 * 512 = 143360 bytes
+Device Boot      Start         End      Blocks  Id System
+/dev/sdb1   *           8        1792      249856  83 Linux
+mount "/dev/sdb" /mnt/usb
+mount: mounting /dev/sdb on /mnt/usb failed: Device or resource busy
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+rm -rf /tmp/test
+rm -rf /mnt/usb/test
+test -e /mnt/usb/test
+echo $?
+1
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.331572 seconds, 769.0KB/s
+cp -arf /tmp/test /mnt/usb
+test -e /mnt/usb/test
+echo $?
+0
+cp -arf /mnt/usb/test /tmp/test1
+test -e /tmp/test1
+echo $?
+0
+cmp -l /tmp/test /tmp/test1
+echo $?
+0
+umount /mnt/usb
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+fdisk -l /dev/sdc
+Disk /dev/sdc: 15.9 GB, 15938355200 bytes
+256 heads, 63 sectors/track, 1930 cylinders
+Units = cylinders of 16128 * 512 = 8257536 bytes
+Device Boot      Start         End      Blocks  Id System
+/dev/sdc1               1        1931    15564799+ ee EFI GPT
+mount "/dev/sdc" /mnt/usb
+mount: mounting /dev/sdc on /mnt/usb failed: Device or resource busy
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+rm -rf /tmp/test
+rm -rf /mnt/usb/test
+test -e /mnt/usb/test
+echo $?
+1
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.332053 seconds, 768.7KB/s
+cp -arf /tmp/test /mnt/usb
+test -e /mnt/usb/test
+echo $?
+0
+cp -arf /mnt/usb/test /tmp/test1
+test -e /tmp/test1
+echo $?
+0
+cmp -l /tmp/test /tmp/test1
+echo $?
+0
+umount /mnt/usb
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+RESULT: USB PASS
+Date:2018-01-31 14:14:10
+Total test time : 87 seconds.

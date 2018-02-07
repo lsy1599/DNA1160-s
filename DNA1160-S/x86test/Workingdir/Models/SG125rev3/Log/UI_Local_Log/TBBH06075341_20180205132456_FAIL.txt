@@ -1,0 +1,144 @@
+
+
+20180205132456
+20180205132601
+FAIL
+USBF
+;;
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-05 13:25:42
+Model:SG125rev3
+=====TEST:USB=====
+fdisk -l |grep -v Disk | grep /dev | awk -F ' ' '{print($1)}'
+/dev/sdb1
+/dev/sdd1
+smartctl -i /dev/sdb1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               General
+Product:              USB Flash Disk
+Revision:             1100
+User Capacity:        8,017,412,096 bytes [8.01 GB]
+Logical block size:   512 bytes
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+smartctl -i /dev/sdd1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               VendorCo
+Product:              ProductCode
+Revision:             2.00
+User Capacity:        15,938,355,200 bytes [15.9 GB]
+Logical block size:   512 bytes
+scsiModePageOffset: response length too short, resp_len=4 offset=4 bd_len=0
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+mount "/dev/sdb1" /mnt/usb
+mount: mounting /dev/sdb1 on /mnt/usb failed: Device or resource busy
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+rm -rf /tmp/test
+rm -rf /mnt/usb/test
+test -e /mnt/usb/test
+echo $?
+1
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.362951 seconds, 751.3KB/s
+cp -arf /tmp/test /mnt/usb
+test -e /mnt/usb/test
+echo $?
+0
+cp -arf /mnt/usb/test /tmp/test1
+test -e /tmp/test1
+echo $?
+0
+cmp -l /tmp/test /tmp/test1
+echo $?
+0
+umount /mnt/usb
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+Not Enough USB test pass
+Date:2018-02-05 13:25:51
+Model:SG125rev3
+=====TEST:USB=====
+fdisk -l |grep -v Disk | grep /dev | awk -F ' ' '{print($1)}'
+/dev/sdb1
+/dev/sdd1
+smartctl -i /dev/sdb1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               General
+Product:              USB Flash Disk
+Revision:             1100
+User Capacity:        8,017,412,096 bytes [8.01 GB]
+Logical block size:   512 bytes
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+smartctl -i /dev/sdd1
+smartctl 6.0 2012-10-10 r3643 [x86_64-linux-4.8.8] (local build)
+Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Vendor:               VendorCo
+Product:              ProductCode
+Revision:             2.00
+User Capacity:        15,938,355,200 bytes [15.9 GB]
+Logical block size:   512 bytes
+scsiModePageOffset: response length too short, resp_len=4 offset=4 bd_len=0
+>> Terminate command early due to bad response to IEC mode page
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+mount "/dev/sdb1" /mnt/usb
+[ 8668.210302] EXT4-fs (sdb1): mounting ext3 file system using the ext4 subsystem
+[ 8668.226045] EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/dev/sdb1 on /mnt/usb type ext3 (rw,relatime,data=ordered)
+rm -rf /tmp/test
+rm -rf /mnt/usb/test
+test -e /mnt/usb/test
+echo $?
+1
+dd if=/dev/zero of=/tmp/test count=1M bs=1
+1048576+0 records in
+1048576+0 records out
+1048576 bytes (1.0MB) copied, 1.330777 seconds, 769.5KB/s
+cp -arf /tmp/test /mnt/usb
+test -e /mnt/usb/test
+echo $?
+0
+cp -arf /mnt/usb/test /tmp/test1
+test -e /tmp/test1
+echo $?
+0
+cmp -l /tmp/test /tmp/test1
+echo $?
+0
+umount /mnt/usb
+mount
+rootfs on / type rootfs (rw,size=987080k,nr_inodes=246770)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/sdc1 on /mnt/usb type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+Not Enough USB test pass
+RESULT: USB FAIL
+Date:2018-02-05 13:26:01
+Total test time : 64 seconds.
