@@ -1,0 +1,51 @@
+
+
+20180403140506
+20180403140524
+PASS
+
+7C5A1C78FFF9;7C5A1C790001
+
+
+DETAIL
+ModelName:SG125Wrev3
+Model:SG125Wrev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.3.13
+Date:2018-04-03 14:05:23
+Model:SG125Wrev3
+=====TEST:WriteMAC=====
+eeupdate64e|grep I211|wc -l
+4
+eeupdate64e|grep "Ethernet Connection X553 1 GbE"|wc -l
+4
+eeupdate64e
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+Warning: No Adapter Selected
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+RESULT: WriteMAC PASS
+Date:2018-04-03 14:05:24
+DllVersion:1.0.3.13
+Date:2018-04-03 14:05:24
+Model:SG125Wrev3
+=====TEST:CheckMAC=====
+RESULT: CheckMAC PASS
+Date:2018-04-03 14:05:24
+Total test time : 18 seconds.

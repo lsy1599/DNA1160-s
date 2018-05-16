@@ -1,0 +1,155 @@
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+Date:2017-11-28 17:52:05
+Model:SG125rev3
+=====TEST:LED=====
+Power LED is error!
+Date:2017-11-28 17:52:12
+Model:SG125rev3
+=====TEST:LED=====
+Please plug in the two power cords.
+Please plug in the two power cords.
+Operator errors!
+RESULT: LED FAIL
+Date:2017-11-28 17:52:14
+Total test time : 19 seconds.
+Test complete£¬please change a new DUT!!
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+1.0.0.0
+Date:2017-12-01 17:13:02
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160_HWM
+======= NCT6683 Info(Begin) =======
+System Temperature = 30 C
+CPU Temperature = 38 C
+System Temperature2 = 26 C
+VCORE Voltage = 0.880 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+System FAN Speed = 0 RPM
+CPU FAN Speed = 0 RPM
+====== NCT6683 Info(The End) ======
+/ $
+CPU FAN Speed out of range
+Date:2017-12-01 17:13:02
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160_HWM
+======= NCT6683 Info(Begin) =======
+System Temperature = 30 C
+CPU Temperature = 38 C
+System Temperature2 = 26 C
+VCORE Voltage = 0.880 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+System FAN Speed = 0 RPM
+CPU FAN Speed = 0 RPM
+====== NCT6683 Info(The End) ======
+/ $
+CPU FAN Speed out of range
+RESULT: HWMonitor FAIL
+Date:2017-12-01 17:13:03
+Total test time : 11 seconds.
+Test complete£¬please change a new DUT!!
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+DllVersion:1.0.0.0
+Date:2017-12-01 17:15:51
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160_HWM
+======= NCT6683 Info(Begin) =======
+System Temperature = 34 C
+CPU Temperature = 42 C
+System Temperature2 = 28 C
+VCORE Voltage = 0.864 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+System FAN Speed = 0 RPM
+CPU FAN Speed = 0 RPM
+====== NCT6683 Info(The End) ======
+/ $
+CPU FAN Speed out of range
+Date:2017-12-01 17:15:52
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160_HWM
+======= NCT6683 Info(Begin) =======
+System Temperature = 34 C
+CPU Temperature = 42 C
+System Temperature2 = 28 C
+VCORE Voltage = 0.864 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+System FAN Speed = 0 RPM
+CPU FAN Speed = 0 RPM
+====== NCT6683 Info(The End) ======
+/ $
+CPU FAN Speed out of range
+RESULT: HWMonitor FAIL
+Date:2017-12-01 17:15:52
+Total test time : 11 seconds.
+Test complete£¬please change a new DUT!!
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+DllVersion:1.0.0.1
+Date:2017-12-05 10:52:26
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160S_HWM
+CPU Temperature = 36 C
+VCORE Voltage = 0.880 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+CPU FAN Speed = 0 RPM
+/ $
+CPU FAN Speed out of range
+Date:2017-12-05 10:52:26
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160S_HWM
+CPU Temperature = 36 C
+VCORE Voltage = 0.880 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+CPU FAN Speed = 0 RPM
+/ $
+CPU FAN Speed out of range
+RESULT: HWMonitor FAIL
+Date:2017-12-05 10:52:26
+Total test time : 11 seconds.
+Test complete£¬please change a new DUT!!

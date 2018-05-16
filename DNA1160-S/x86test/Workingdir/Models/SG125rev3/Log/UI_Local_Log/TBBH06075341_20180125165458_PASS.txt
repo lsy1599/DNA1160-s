@@ -1,0 +1,44 @@
+
+
+20180125165458
+20180125165603
+PASS
+
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+[25;78H99[10;31H
+Current selected comport:3
+/ $
+DllVersion:1.0.1.12
+Date:2018-01-25 16:56:02
+Model:SG125rev3
+=====TEST:SetRTC=====
+System Time:4 01 25 08:56:02 2018
+date -s 2018.01.25-08:56:02
+Thu Jan 25 08:56:02 UTC 2018
+/ $
+hwclock -w
+/ $
+hwclock
+Thu Jan 25 08:56:02 2018  0.000000 seconds
+/ $
+Time Interval:0 s
+RESULT: SetRTC PASS
+Date:2018-01-25 16:56:02
+DllVersion:1.0.1.12
+Date:2018-01-25 16:56:02
+Model:SG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Thu Jan 25 08:56:02 2018  0.000000 seconds
+/ $
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2018-01-25 16:56:03
+Total test time : 64 seconds.

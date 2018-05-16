@@ -1,0 +1,31 @@
+12
+Çø
+20180403154133
+20180403154151
+FAIL
+SATA
+
+
+
+DETAIL
+ModelName:SG125Wrev3
+Model:SG125Wrev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.3.13
+Date:2018-04-03 15:41:50
+Model:SG125Wrev3
+=====TEST:M2_ssd=====
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+SSD model error
+Date:2018-04-03 15:41:50
+Model:SG125Wrev3
+=====TEST:M2_ssd=====
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+SSD model error
+RESULT: M2_ssd FAIL
+Date:2018-04-03 15:41:51
+Total test time : 17 seconds.

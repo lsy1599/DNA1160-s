@@ -1,0 +1,55 @@
+
+
+20180202172238
+20180202172327
+FAIL
+BPCI
+;;
+
+
+DETAIL
+ModelName:NSK3300_MPCIE_LTE7430APAC_KIT
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-02 17:23:23
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2 &
+[1] 240
+-/bin/sh: line 273: /dev/ttyUSB2: No such device or address
+/ $
+[1]+  Done(1)                 echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2
+killall -9 cat
+killall: cat: no process killed
+/ $
+Can not find IMEI!
+Date:2018-02-02 17:23:25
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2 &
+[1] 246
+-/bin/sh: line 280: /dev/ttyUSB2: No such device or address
+/ $
+[1]+  Done(1)                 echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2
+killall -9 cat
+killall: cat: no process killed
+/ $
+Can not find IMEI!
+RESULT: PCIE FAIL
+Date:2018-02-02 17:23:27
+Total test time : 49 seconds.

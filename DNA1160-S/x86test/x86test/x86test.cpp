@@ -181,6 +181,7 @@ int get_com_port_num(char* cPID) {
 	}
 
 	hCom = InitCom(nComPort, 115200);
+	
 	if (NULL != hCom)
 	{
 		return nComPort;
@@ -195,12 +196,11 @@ int shell_mode()
 	CString csTemp, csRecv;
 	int nFind = 0;
 	DWORD TimeStart = ::GetTickCount();// GetTickCount 函数返回自操作系统启动所经过的毫秒数
-	while (::GetTickCount() - TimeStart < 30000)
+	while (::GetTickCount() - TimeStart < 3000)
 	{
-		if (::GetTickCount() - TimeStart > 2000)//10000&&!nEnter=1
-		{
-			ComSendCmd(hCom, "\r");
-		}
+		if(::GetTickCount()- TimeStart > 500)
+		ComSendCmd(hCom, "\r");
+	
 		if (!ComFind(hCom, csRecv, "$"))//找提示符
 		{
 			nFind = 1;
@@ -226,46 +226,61 @@ bool DutInit()//读取用户输入的 SN 和 MAC
 	char cPID_MicroUSB[16];
 	sprintf(cPID_MicroUSB, "*%s*", TestIni.strMicroUSBPID);
 
-	//////////////////////////////////////////////////////
-	//	cPID_232_RJ45
-	nComPort = get_com_port_num(cPID_232_RJ45);// PNP0501
-	Sleep(500);
-	if (nComPort != -1)
+	while (1)
 	{
-		if (!shell_mode())// 0: enter system success
+		//////////////////////////////////////////////////////
+		//	cPID_232_RJ45
+		nComPort = get_com_port_num(cPID_232_RJ45);// PNP0501
+		Sleep(500);
+		if (nComPort != -1)
 		{
-			csMsg.Format("Current selected comport:%d", nComPort);
-			ShowUIMessage(csMsg);
-			goto there;
+			if (!shell_mode())// 0: enter system success
+			{
+				csMsg.Format("Current selected comport:%d", nComPort);
+				ShowUIMessage(csMsg);
+				break;
+			}
+			else 
+			{
+				CloseCom(hCom);
+			}
+		}
+		////////////////////////////////////////////////////////////////
+		//   cPID_USB_RJ45
+		nComPort = get_com_port_num(cPID_USB_RJ45);// PID_2303
+		Sleep(500);
+		if (nComPort != -1)
+		{
+			if (!shell_mode())// 0: enter system success
+			{
+				csMsg.Format("Current selected comport:%d", nComPort);
+				ShowUIMessage(csMsg);
+				break;
+			}
+			else
+			{
+				CloseCom(hCom);
+			}
+		}
+		////////////////////////////////////////////////////////////////
+		//   cPID_MicroUSB
+		nComPort = get_com_port_num(cPID_MicroUSB);// PID_2303
+		Sleep(500);
+		if (nComPort != -1)
+		{
+			if (!shell_mode())// 0: enter system success
+			{
+				csMsg.Format("Current selected comport:%d", nComPort);
+				ShowUIMessage(csMsg);
+				break;
+			}
+			else
+			{
+				CloseCom(hCom);
+			}
 		}
 	}
-	////////////////////////////////////////////////////////////////
-	//   cPID_USB_RJ45
-	nComPort = get_com_port_num(cPID_USB_RJ45);// PID_2303
-	Sleep(500);
-	if (nComPort != -1)
-	{
-		if (!shell_mode())// 0: enter system success
-		{
-			csMsg.Format("Current selected comport:%d", nComPort);
-			ShowUIMessage(csMsg);
-			goto there;
-		}
-	}
-	////////////////////////////////////////////////////////////////
-	//   cPID_MicroUSB
-	nComPort = get_com_port_num(cPID_MicroUSB);// PID_2303
-	Sleep(500);
-	if (nComPort != -1)
-	{
-		if (!shell_mode())// 0: enter system success
-		{
-			csMsg.Format("Current selected comport:%d", nComPort);
-			ShowUIMessage(csMsg);
-			goto there;
-		}
-	}
-there:
+	
 	if (NULL == hCom)
 	{
 		ShowUIMessage("COM Open Fail!");
@@ -455,7 +470,7 @@ void LoadIni()
 
 	TestIni.nCountDownSec = GetIniInt(csModel, IniFileName, "DutConfig", "CountDownSec", 20);
 
-	TestIni.nNetPort = GetIniInt(csModel, IniFileName, "DutConfig", "PortNum", 8);//由于暂时只有4个网卡的驱动，所以此处暂时先改为 4
+	TestIni.nNetPort = GetIniInt(csModel, IniFileName, "DutConfig", "PortNum", 9);//由于暂时只有4个网卡的驱动，所以此处暂时先改为 4
 	TestIni.nSATANum = GetIniInt(csModel, IniFileName, "DutConfig", "SATANum", 2);
 
 	GetIniString(csModel, IniFileName, "HWSpec", "CPUTempMin", "0.001", pBuf);
@@ -522,6 +537,19 @@ void LoadIni()
 	TestIni.hwSpec.SystemFANFullSpeed.minval = atof(pBuf);
 	GetIniString(csModel, IniFileName, "HWSpec", "SFFullSpeedMax", "2500", pBuf);
 	TestIni.hwSpec.SystemFANFullSpeed.maxval = atof(pBuf);
+
+	GetIniString(csModel, IniFileName, "HWSpec", "Power_On_Hours", "1500", pBuf);
+	TestIni.hwSpec.smart.Power_On_Hours = atof(pBuf);
+	GetIniString(csModel, IniFileName, "HWSpec", "Reallocated_Sector_Ct", "0", pBuf);
+	TestIni.hwSpec.smart.Reallocated_Sector_Ct = atof(pBuf);
+	GetIniString(csModel, IniFileName, "HWSpec", "Reallocated_Event_Count", "0", pBuf);
+	TestIni.hwSpec.smart.Reallocated_Event_Count = atof(pBuf);
+	GetIniString(csModel, IniFileName, "HWSpec", "Current_Pending_Sector", "0", pBuf);
+	TestIni.hwSpec.smart.Current_Pending_Sector = atof(pBuf);
+	GetIniString(csModel, IniFileName, "HWSpec", "Offline_Uncorrectable", "0", pBuf);
+	TestIni.hwSpec.smart.Offline_Uncorrectable = atof(pBuf);
+	GetIniString(csModel, IniFileName, "HWSpec", "UDMA_CRC_Error_Count", "0", pBuf);
+	TestIni.hwSpec.smart.UDMA_CRC_Error_Count = atof(pBuf);
 
 	/*GetIniString(csModel, IniFileName, "HWSpec", "MemSizeMin", "16", pBuf);
 	TestIni.hwSpec.MemSize.minval = atof(pBuf);

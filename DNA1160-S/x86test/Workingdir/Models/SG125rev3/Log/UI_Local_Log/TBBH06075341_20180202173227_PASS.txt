@@ -1,0 +1,311 @@
+
+
+20180202173227
+20180202173321
+PASS
+
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-02 17:33:12
+Model:SG125rev3
+=====TEST:WriteI211=====
+eeupdate64e /NIC=1 /INVMUPDATE /FILE=/usr/share/I211_DNB1160.txt
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+Update INVM content ... Verify autoload configuration ... done.
+eeupdate64e /NIC=2 /INVMUPDATE /FILE=/usr/share/I211_DNB1160.txt
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+Update INVM content ... Verify autoload configuration ... done.
+eeupdate64e /NIC=3 /INVMUPDATE /FILE=/usr/share/I211_DNB1160.txt
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+Update INVM content ... Verify autoload configuration ... done.
+eeupdate64e /NIC=4 /INVMUPDATE /FILE=/usr/share/I211_DNB1160.txt
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+Update INVM content ... Verify autoload configuration ... done.
+RESULT: WriteI211 PASS
+Date:2018-02-02 17:33:14
+DllVersion:1.0.2.12
+Date:2018-02-02 17:33:14
+Model:SG125rev3
+=====TEST:WriteMAC=====
+eeupdate64e|grep I211|wc -l
+4
+eeupdate64e|grep "Ethernet Connection X553 1 GbE"|wc -l
+4
+eeupdate64e
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+Warning: No Adapter Selected
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+eeupdate64e /NIC=1 /MAC=0010F35F0785
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+1: Updating Mac Address to 0010F35F0785...Done.
+eeupdate64e /NIC=2 /MAC=0010F35F0786
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+2: Updating Mac Address to 0010F35F0786...Done.
+eeupdate64e /NIC=3 /MAC=0010F35F0787
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+3: Updating Mac Address to 0010F35F0787...Done.
+eeupdate64e /NIC=4 /MAC=0010F35F0788
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+Only /INVM* and /MAC commands are valid for this adapter.
+4: Updating Mac Address to 0010F35F0788...Done.
+eeupdate64e /NIC=5 /MAC=0010F35F0789
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+5: Updating Mac Address to 0010F35F0789...Done.
+5: Updating Checksum and CRCs...Done.
+eeupdate64e /NIC=6 /MAC=0010F35F0781
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+6: Updating Mac Address to 0010F35F0781...Done.
+Done.
+eeupdate64e /NIC=7 /MAC=0010F35F0782
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7: Updating Mac Address to 0010F35F0782...Done.
+Done.
+eeupdate64e /NIC=8 /MAC=0010F35F0783
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8: Updating Mac Address to 0010F35F0783...Done.
+Done.
+eeupdate64e /NIC=9 /MAC=0010F35F0784
+Connection to QV driver failed - please reinstall it!
+Using: Intel (R) PRO Network Connections SDK v2.29.5
+EEUPDATE v5.29.05.02
+Copyright (C) 1995 - 2017 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+Driverless Mode
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+1   2  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+2   3  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+3   4  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+4   5  00  00   8086-1539    Intel(R) I211 Gigabit Network Connection
+5  10  00  00   8086-1536    Intel(R) I210 Gigabit Fiber Network Connection
+6  11  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+7  11  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+8  12  00  00   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9  12  00  01   8086-15E5    Intel(R) Ethernet Connection X553 1 GbE
+9: Updating Mac Address to 0010F35F0784...Done.
+Done.
+RESULT: WriteMAC PASS
+Date:2018-02-02 17:33:21
+Total test time : 53 seconds.

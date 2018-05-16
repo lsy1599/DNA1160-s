@@ -1,0 +1,41 @@
+
+
+20180209145946
+20180209150035
+FAIL
+BPCI
+;
+
+
+DETAIL
+ModelName:NSK3300_MPCIE_S
+Model:NSK3300_MPCIE_S
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-09 15:00:32
+Model:NSK3300_MPCIE_S
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+Can not find IMEI!
+Date:2018-02-09 15:00:33
+Model:NSK3300_MPCIE_S
+=====TEST:PCIE=====
+lspci -s 09:00.0
+/ $lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+[1]+  Killed                  cat /dev/ttyUSB2
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+Can not find IMEI!
+RESULT: PCIE FAIL
+Date:2018-02-09 15:00:35
+Total test time : 49 seconds.

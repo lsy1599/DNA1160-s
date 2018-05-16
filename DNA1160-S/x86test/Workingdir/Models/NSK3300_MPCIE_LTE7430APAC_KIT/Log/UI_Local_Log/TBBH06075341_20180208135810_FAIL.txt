@@ -1,0 +1,41 @@
+
+
+20180208135810
+20180208135857
+FAIL
+BPCI
+;;
+
+
+DETAIL
+ModelName:NSK3300_MPCIE_LTE7430APAC_KIT
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-08 13:58:56
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+lsusb
+Bus 001 Device 001: ID 1d6b:0002
+Bus 001 Device 002: ID 090c:1000
+Bus 002 Device 001: ID 1d6b:0003
+Bus 001 Device 003: ID ffff:5678
+Can not find LTECardID!
+Date:2018-02-08 13:58:56
+Model:NSK3300_MPCIE_LTE7430APAC_KIT
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+lsusb
+Bus 001 Device 001: ID 1d6b:0002
+Bus 001 Device 002: ID 090c:1000
+Bus 002 Device 001: ID 1d6b:0003
+Bus 001 Device 003: ID ffff:5678
+Can not find LTECardID!
+RESULT: PCIE FAIL
+Date:2018-02-08 13:58:57
+Total test time : 46 seconds.

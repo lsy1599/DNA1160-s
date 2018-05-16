@@ -1,0 +1,38 @@
+Please insert DUT...
+/ $
+/ $
+
+/ $
+/ $
+/ $
+Date:2017-11-28 17:47:31
+Model:SG125rev3
+=====TEST:SetRTC=====
+System Time:2 11 28 09:47:31 2017
+date -s 2017.11.28-09:47:31
+Tue Nov 28 09:47:31 UTC 2017
+/ $
+hwclock -w
+/ $
+hwclock
+Tue Nov 28 09:47:31 2017  0.000000 seconds
+/ $
+Time Interval:0 s
+RESULT: SetRTC PASS
+Date:2017-11-28 17:47:31
+Date:2017-11-28 17:47:31
+Model:SG125rev3
+=====TEST:Wifi=====
+Please config the wireless network of host PC
+Please config the wireless network of host PC
+Operator errors!
+Date:2017-11-28 17:47:41
+Model:SG125rev3
+=====TEST:Wifi=====
+Please config the wireless network of host PC
+Please config the wireless network of host PC
+Operator errors!
+RESULT: Wifi FAIL
+Date:2017-11-28 17:47:43
+Total test time : 23 seconds.
+Test complete£¬please change a new DUT!!

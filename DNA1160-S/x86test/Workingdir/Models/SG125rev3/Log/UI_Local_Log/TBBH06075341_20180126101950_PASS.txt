@@ -1,0 +1,35 @@
+
+
+20180126101950
+20180126102224
+PASS
+
+;0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+[07;00H                                                                                [08;00H                                                                                [09;00H                                                                                [10;00H                                                                                [11;00H                                                                                [12;00H                                                                                [13;00H                                                                                [14;00H                                                                                [15;00H                                                                                [16;00H                                                                                [17;00H                                                                                [18;00H                                                                                [19;00H                                                                                [20;00H                                                                                [21;00H                                                                                [22;00H                                                                                [23;00H                                                                                [24;00H                                                                               [24;00H[00;01H
+Current selected comport:3
+/ $
+DllVersion:1.0.2.12
+Date:2018-01-26 10:20:43
+Model:SG125rev3
+=====TEST:LED=====
+killall -s 9 fio
+/ $
+DNA130S_LED 2
+[DNA130S] CPLD LED set to red constantly.
+[DNA130S] CPLD LED get reg[0xf4]: 0xFF
+[13]+  Killed                  fio -filename=/dev/sda -direct=1 -iodepth=1 -thread -rw=randread -bs=512k -numjobs=8 -runtime=600 -group_reporting -name=nxtest
+/ $
+DNA130S_LED 3
+[DNA130S] CPLD LED set to green constantly.
+[DNA130S] CPLD LED get reg[0xf4]: 0xFF
+/ $
+RESULT: LED PASS
+Date:2018-01-26 10:22:24
+Total test time : 153 seconds.

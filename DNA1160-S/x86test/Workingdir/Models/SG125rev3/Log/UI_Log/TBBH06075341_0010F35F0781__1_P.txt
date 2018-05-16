@@ -1,0 +1,29 @@
+Please insert DUT...
+DllVersion:1.0.0.7
+Date:2017-12-21 14:45:02
+Model:SG125rev3
+=====TEST:SetRTC=====
+System Time:4 12 21 06:45:02 2017
+date -s 2017.12.21-06:45:02
+Thu Dec 21 06:45:02 UTC 2017
+/ $
+hwclock -w
+/ $
+hwclock
+Thu Dec 21 06:45:02 2017  0.000000 seconds
+/ $
+Time Interval:-1 s
+RESULT: SetRTC PASS
+Date:2017-12-21 14:45:03
+DllVersion:1.0.0.7
+Date:2017-12-21 14:45:03
+Model:SG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Thu Dec 21 06:45:02 2017  0.000000 seconds
+/ $
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2017-12-21 14:45:03
+Total test time : 57 seconds.
+Test complete£¬please change a new DUT!!

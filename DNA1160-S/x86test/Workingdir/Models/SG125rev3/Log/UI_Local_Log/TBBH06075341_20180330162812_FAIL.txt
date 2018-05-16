@@ -1,0 +1,43 @@
+
+
+20180330162812
+20180330162926
+FAIL
+HWMF
+;;
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.13
+Date:2018-03-30 16:29:26
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160S_HWM
+CPU Temperature = 56 C
+VCORE Voltage = 0.864 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+CPU FAN Speed = 0 RPM
+CPU FAN Speed out of range
+Date:2018-03-30 16:29:26
+Model:SG125rev3
+=====TEST:HWMonitor=====
+DNA1160S_HWM
+CPU Temperature = 56 C
+VCORE Voltage = 0.864 V
+DRAM Voltage = 1.200 V
+3.3V Voltage = 3.286 V
+5V Voltage = 4.980 V
+12V Voltage = 11.904 V
+CPU FAN Speed = 0 RPM
+CPU FAN Speed out of range
+RESULT: HWMonitor FAIL
+Date:2018-03-30 16:29:26
+Total test time : 74 seconds.

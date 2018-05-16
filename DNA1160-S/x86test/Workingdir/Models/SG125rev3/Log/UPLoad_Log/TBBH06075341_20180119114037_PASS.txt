@@ -1,0 +1,33 @@
+
+
+20180119114037
+20180119114131
+PASS
+
+0010F35F0781;0010F35F0781
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+matching device(s) not found.
+Can't find comport!
+Com port COM3 founded!
+
+Current selected comport:3
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PT_FT: 0
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PT_FT: 0
+[07;00H                                                                                [08;00H                                                                                [09;00H                                                                                [10;00H                                                                                [11;00H                                                                                [12;00H                                                                                [13;00H                                                                                [14;00H                                                                                [15;00H                                                                                [16;00H                                                                                [17;00H                                                                                [18;00H                                                                                [19;00H                                                                                [20;00H                                                                                [21;00H                                                                                [22;00H                                                                                [23;00H                                                                                [24;00H                                                                               [24;00H[00;01H
+DllVersion:1.0.1.12
+Date:2018-01-19 11:41:31
+Model:SG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Fri Jan 19 03:41:30 2018  0.000000 seconds
+/ $
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2018-01-19 11:41:31
+Total test time : 54 seconds.

@@ -574,7 +574,7 @@ int WriteMAC()
 		return -1;
 	}
 	csRecv.Empty();
-	ComRecvCmd(hCom, "eeupdate64e|grep \"Ethernet Connection X553 1 GbE\"|wc -l", csRecv, "$");
+	ComRecvCmd(hCom, "eeupdate64e|grep X553|wc -l", csRecv, "$");
 	if (-1 == csRecv.Find("4"))            //这4个网口暂时没有驱动，先不管
 	{
 		ShowUIMessage("Not enough I354 ethernet port found");
@@ -588,25 +588,30 @@ int WriteMAC()
 		return -1;
 	}
 	csRecv.Empty();
+
+	long long macnum_beg[1] = {0}, macnum_end[1] = {0};
+
 	csTemp.Format("%c%c%c%c%c%c%c%c%c%c%c%c", sfisData->czMAC[0], sfisData->czMAC[1], sfisData->czMAC[2], sfisData->czMAC[3], sfisData->czMAC[4], sfisData->czMAC[5], sfisData->czMAC[6], sfisData->czMAC[7], sfisData->czMAC[8], sfisData->czMAC[9], sfisData->czMAC[10], sfisData->czMAC[11]);
-	Str2MAC(nMACBeg, csTemp.GetBuffer());//Str2MAC 函数将第二个参数每两位16进制数转化为十进制数存储在第一个参数中	
+	Hex2Long(macnum_beg, csTemp.GetBuffer());
 	csTemp.Format("%c%c%c%c%c%c%c%c%c%c%c%c", sfisData->czSSN1[0], sfisData->czSSN1[1], sfisData->czSSN1[2], sfisData->czSSN1[3], sfisData->czSSN1[4], sfisData->czSSN1[5], sfisData->czSSN1[6], sfisData->czSSN1[7], sfisData->czSSN1[8], sfisData->czSSN1[9], sfisData->czSSN1[10], sfisData->czSSN1[11]);
-	Str2MAC(nMACEnd, csTemp.GetBuffer());
-	for (int i = 4; i < 6; i++)
+	Hex2Long(macnum_end, csTemp.GetBuffer());
+	
+	long Length = abs(macnum_beg[0] - macnum_end[0]);
+	if (Length != 8) 
 	{
-		if (nMACBeg[i] == nMACEnd[i])
-			continue;
-		if (nMACBeg[i] > nMACEnd[i])
-		{
-			nReverse = 1;
-			break;
-		}
-		else
-		{
-			nReverse = 0;
-			break;
-		}
+		ShowUIMessage("Length of MAC begin and MAC end must be 8");
+		return -1;
 	}
+	
+	if (macnum_beg[0] > macnum_end[0])
+	{
+		nReverse = 1;
+	}
+	if(macnum_beg[0] < macnum_end[0])
+	{
+		nReverse = 0;
+	}
+
 	if (-1 == nReverse)//若 -1==nReverse 则表示，nMACBeg[7]和nMACEnd[7] 两个数组中的内容完全一样
 	{
 		ShowUIMessage("Same Barcode for MAC Begin and MAC End");
@@ -623,7 +628,7 @@ int WriteMAC()
 		csMacEnd.Format("%c%c:%c%c:%c%c:%c%c:%c%c:%c%c", sfisData->czSSN1[0], sfisData->czSSN1[1], sfisData->czSSN1[2], sfisData->czSSN1[3], sfisData->czSSN1[4], sfisData->czSSN1[5], sfisData->czSSN1[6], sfisData->czSSN1[7], sfisData->czSSN1[8], sfisData->czSSN1[9], sfisData->czSSN1[10], sfisData->czSSN1[11]);
 	}
 	csTemp = csMacBeg;
-	for (int i = 0; i < TestIni.nNetPort; i++)//此例中，nNetPort 暂时为8
+	for (int i = 1; i < TestIni.nNetPort; i++)//此例中，nNetPort 暂时为9
 	{
 		if (!MACIncr(csTemp, csRecv))
 		{
@@ -697,6 +702,7 @@ int WriteMAC()
 		csAaa = str;
 		str.Remove(':');
 	}
+
 	return 0;
 }
 
@@ -1290,29 +1296,29 @@ int CheckMAC()
 	CString csTemp, csRecv, csMacBeg, csMacEnd, str, csAaa;
 	BYTE nMACBeg[6], nMACEnd[6];
 	int nReverse = -1;
+	long long macnum_beg[1] = { 0 }, macnum_end[1] = { 0 };
+
 	csTemp.Format("%c%c%c%c%c%c%c%c%c%c%c%c", sfisData->czMAC[0], sfisData->czMAC[1], sfisData->czMAC[2], sfisData->czMAC[3], sfisData->czMAC[4], sfisData->czMAC[5], sfisData->czMAC[6], sfisData->czMAC[7], sfisData->czMAC[8], sfisData->czMAC[9], sfisData->czMAC[10], sfisData->czMAC[11]);
+	Hex2Long(macnum_beg, csTemp.GetBuffer());
+	csTemp.Format("%c%c%c%c%c%c%c%c%c%c%c%c", sfisData->czSSN1[0], sfisData->czSSN1[1], sfisData->czSSN1[2], sfisData->czSSN1[3], sfisData->czSSN1[4], sfisData->czSSN1[5], sfisData->czSSN1[6], sfisData->czSSN1[7], sfisData->czSSN1[8], sfisData->czSSN1[9], sfisData->czSSN1[10], sfisData->czSSN1[11]);
+	Hex2Long(macnum_end, csTemp.GetBuffer());
 
-	Str2MAC(nMACBeg, csTemp.GetBuffer());
-	csTemp.Format("%c%c%c%c%c%c%c%c%c%c%c%c", sfisData->czSSN1[0], sfisData->czMAC[1], sfisData->czSSN1[2], sfisData->czSSN1[3], sfisData->czMAC[4], sfisData->czSSN1[5], sfisData->czSSN1[6], sfisData->czSSN1[7], sfisData->czSSN1[8], sfisData->czSSN1[9], sfisData->czSSN1[10], sfisData->czSSN1[11]);
-
-	Str2MAC(nMACEnd, csTemp.GetBuffer());//Str2MAC 函数将字符串转化为数字
-	
-	
-	for (int i = 4; i < 6; i++)
+	long Length = abs(macnum_beg[0] - macnum_end[0]);
+	if (Length != 8)
 	{
-		if (nMACBeg[i] == nMACEnd[i])
-			continue;
-		if (nMACBeg[i] > nMACEnd[i])
-		{
-			nReverse = 1;
-			break;
-		}
-		else
-		{
-			nReverse = 0;
-			break;
-		}
+		ShowUIMessage("Length of MAC begin and MAC end must be 8");
+		return -1;
 	}
+
+	if (macnum_beg[0] > macnum_end[0])
+	{
+		nReverse = 1;
+	}
+	if (macnum_beg[0] < macnum_end[0])
+	{
+		nReverse = 0;
+	}
+
 	if (-1 == nReverse)
 	{
 		ShowUIMessage("Same Barcode for MAC Begin and MAC End");
@@ -1329,7 +1335,7 @@ int CheckMAC()
 		csMacEnd.Format("%c%c:%c%c:%c%c:%c%c:%c%c:%c%c", sfisData->czSSN1[0], sfisData->czSSN1[1], sfisData->czSSN1[2], sfisData->czSSN1[3], sfisData->czSSN1[4], sfisData->czSSN1[5], sfisData->czSSN1[6], sfisData->czSSN1[7], sfisData->czSSN1[8], sfisData->czSSN1[9], sfisData->czSSN1[10], sfisData->czSSN1[11]);
 	}
 	csTemp = csMacBeg;
-	for (int i = 0; i < TestIni.nNetPort; i++)//此处将 TestIni.nNetPort 暂时改为 4 ，是因为还有 4 个网卡没驱动
+	for (int i = 1; i < TestIni.nNetPort; i++)//此处将 TestIni.nNetPort 暂时改为 4 ，是因为还有 4 个网卡没驱动
 	{
 		if (!MACIncr(csTemp, csRecv))//MACIncr 函数将 csTemp 经过一系列处理后以十六进制形式存放在 csRecv 中
 		{
@@ -2177,11 +2183,15 @@ int SFP() //光纤接口  //合格
 	ComRecvCmd(hCom, csSend, csRecv, "$");
 	csSend.Empty();
 	csRecv.Empty();
-	csSend.Format("ping %s  -I %s -c 6", TestIni.csHostIP, TestIni.csClientIP);
+
+	csSend.Format("ping %s  -I %s -c 6| grep packet | awk -F' ' '{print $7}'|cut -d'%%' -f1", TestIni.csHostIP, TestIni.csClientIP);
+	CString lostPackets;
 	ComRecvCmd(hCom, csSend, csRecv, "$");
-	if (-1 == csRecv.Find("0% packet loss"))
+	GetCStrings(csRecv, "\n", "\r", lostPackets, 1);
+	if (lostPackets != "0")
 	{
-		ShowUIMessage("Ping failed");
+		csTemp.Format("Packet lost: %s%%.", lostPackets);
+		ShowUIMessage(csTemp + "Ping failed");
 		return -1;
 	}
 	//-----------------------------------------------------------------------------------------------------------
@@ -2290,8 +2300,10 @@ int GetComNum(const char* ProductID)
 	{
 		SysBits = 32;
 	}
+
 	HKEY hKey = NULL;
 	long ret = 0;
+
 	LPCTSTR data = LPCTSTR("SYSTEM\\CurrentControlSet\\Control\\COM Name Arbiter");
 	if (64 == SysBits)
 	{
@@ -2382,37 +2394,10 @@ int PCIE()
 	CString csSend, csRecv, csTemp;
 	char Ctrl_C = 0x03;
 	ComRecvCmd(hCom, "lspci -s 09:00.0", csRecv, "$");
+
 	// wifi
 	if (station_flag == "FT") {
-		if (TestIni.csWifiCard1ID != "skip")
-		{
-			if (-1 == csRecv.Find(TestIni.csWifiCard1ID))
-			{
-				ShowUIMessage("Can not find WifiCard1ID!");
-				return -1;
-			}
-			else
-			{
-				csTemp.Format("WifiCard1ID:%s", TestIni.csWifiCard1ID);
-				ShowUIMessage(csTemp);
-			}
-		}
-		if (TestIni.csWifiCard2ID != "skip")
-		{
-			csRecv.Empty();
-			ComRecvCmd(hCom, "lspci -s 08:00.0", csRecv, "$");
-			if (-1 == csRecv.Find(TestIni.csWifiCard2ID))
-			{
-				ShowUIMessage("Can not find WifiCard2ID!");
-				return -1;
-			}
-			else
-			{
-				csTemp.Format("WifiCard2ID:%s", TestIni.csWifiCard2ID);
-				ShowUIMessage(csTemp);
-			}
-		}
-		if (csModel == "NSK3300_MPCIE_LTE7455NA" || csModel == "NSK3300_MPCIE_LTE7430APAC_KIT" || csModel == "NSK3300_MPCIE_S") {
+		if (csModel == "NSK3300_MPCIE_LTE7455NA" || csModel == "NSK3300_MPCIE_LTE7430APAC_KIT") {
 			// LTE 4G
 			csRecv.Empty();
 			if (TestIni.csLTECardID != "skip")
@@ -2430,22 +2415,83 @@ int PCIE()
 				}
 			}
 		}
+		else {
+			if (TestIni.csWifiCard1ID != "skip")
+			{
+				if (-1 == csRecv.Find(TestIni.csWifiCard1ID))
+				{
+					ShowUIMessage("Can not find WifiCard1ID!");
+					return -1;
+				}
+				else
+				{
+					csTemp.Format("WifiCard1ID:%s", TestIni.csWifiCard1ID);
+					ShowUIMessage(csTemp);
+				}
+			}
+			if (TestIni.csWifiCard2ID != "skip")
+			{
+				csRecv.Empty();
+				ComRecvCmd(hCom, "lspci -s 08:00.0", csRecv, "$");
+				if (-1 == csRecv.Find(TestIni.csWifiCard2ID))
+				{
+					ShowUIMessage("Can not find WifiCard2ID!");
+					return -1;
+				}
+				else
+				{
+					csTemp.Format("WifiCard2ID:%s", TestIni.csWifiCard2ID);
+					ShowUIMessage(csTemp);
+				}
+			}
+		}
 	}
 	else {// PT
-		// LTE 4G
 		csRecv.Empty();
-		if (TestIni.csLTECardID != "skip")
-		{
-			ComRecvCmd(hCom, "lsusb", csRecv, "$");
-			if (-1 == csRecv.Find(TestIni.csLTECardID))
+		if (csModel == "NSK3300_MPCIE_S") {//if NSK3300_MPCIE_S wifi
+			if (TestIni.csWifiCard1ID != "skip")
 			{
-				ShowUIMessage("Can not find LTECardID!");
-				return -1;
+				if (-1 == csRecv.Find(TestIni.csWifiCard1ID))
+				{
+					ShowUIMessage("Can not find WifiCard1ID!");
+					return -1;
+				}
+				else
+				{
+					csTemp.Format("WifiCard1ID:%s", TestIni.csWifiCard1ID);
+					ShowUIMessage(csTemp);
+				}
 			}
-			else
+			if (TestIni.csWifiCard2ID != "skip")
 			{
-				csTemp.Format("LTECardID:%s", TestIni.csLTECardID);
-				ShowUIMessage(csTemp);
+				csRecv.Empty();
+				ComRecvCmd(hCom, "lspci -s 08:00.0", csRecv, "$");
+				if (-1 == csRecv.Find(TestIni.csWifiCard2ID))
+				{
+					ShowUIMessage("Can not find WifiCard2ID!");
+					return -1;
+				}
+				else
+				{
+					csTemp.Format("WifiCard2ID:%s", TestIni.csWifiCard2ID);
+					ShowUIMessage(csTemp);
+				}
+			}
+		}
+		else {//LTE
+			if (TestIni.csLTECardID != "skip")
+			{
+				ComRecvCmd(hCom, "lsusb", csRecv, "$");
+				if (-1 == csRecv.Find(TestIni.csLTECardID))
+				{
+					ShowUIMessage("Can not find LTECardID!");
+					return -1;
+				}
+				else
+				{
+					csTemp.Format("LTECardID:%s", TestIni.csLTECardID);
+					ShowUIMessage(csTemp);
+				}
 			}
 		}
 	}
@@ -2456,10 +2502,18 @@ int PCIE()
 		Sleep(500);
 		ComRecvCmd(hCom, "insmod /usr/share/GobiSerial.ko", csRecv, "$");
 		Sleep(500);
-		ComRecvCmd(hCom, "echo AT+CIMI > /dev/ttyUSB2 && cat /dev/ttyUSB2 &\r", csRecv, "$");
-		CString s;
-		ComRecvCmd(hCom, "killall -9 cat\r", s, "$");
+		
+		//ComRecvCmd(hCom, "echo AT+CIMI > /dev/ttyUSB2;cat /dev/ttyUSB2 &\r", csRecv, "$");
+		/*ComSendCmd(hCom, "echo AT+CIMI > /dev/ttyUSB2");
+		ComRecvCmd(hCom, "cat /dev/ttyUSB2 &\r", csRecv, "$");*/
+		
+		ComRecvCmd(hCom, "echo AT+CIMI > /dev/ttyUSB2", csRecv, "$");
+		ComSendCmd(hCom, "cat /dev/ttyUSB2 > /tmp/lte.log &");
+		ComRecvCmd(hCom, "cat /tmp/lte.log", csRecv, "$");
 
+		ComSendCmd(hCom, "\r");
+		ComSendCmd(hCom, "killall -9 cat");
+		ComSendCmd(hCom, "\r");
 		if (-1 == csRecv.Find(TestIni.csIMEI))
 		{
 			ShowUIMessage("Can not find IMEI!");
@@ -2565,23 +2619,65 @@ int M2_ssd()
 	//	}
 	//	return 0;
 	//}
-
 	ComRecvCmd(hCom, "smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'", csRecv, "$");
-	if (-1 == csRecv.Find(TestIni.SSDModel))
+	CString res;
+	int i = 1;
+	while (GetCStrings(TestIni.SSDModel, "<", ">", res, i++))
 	{
-		GetCString(csRecv, "\r\n", "\r\n", csRecv);
-		csTemp.Format("SSD model:%s", csRecv);
-		ShowUIMessage(csTemp);
-		ShowUIMessage("SSD model error");
-		return -1;
+		if (-1 != csRecv.Find(res))
+		{
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			csTemp.Format("SSD model:%s", csRecv);
+			ShowUIMessage(csTemp);
+
+			// TODO smart
+			ComRecvCmd(hCom, "smartctl -a /dev/sda | awk '/Power_On_Hours/ {print $NF}'", csRecv, "$");
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			if (TestIni.hwSpec.smart.Power_On_Hours < atof(csRecv))
+			{
+				ShowUIMessage("SMART FAIL");
+				return -1;
+			}
+			ComRecvCmd(hCom, "smartctl -a /dev/sda | awk '/Reallocated_Sector_Ct/ {print $NF}'", csRecv, "$");
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			if (TestIni.hwSpec.smart.Reallocated_Sector_Ct < atof(csRecv))
+			{
+				ShowUIMessage("SMART FAIL");
+				return -1;
+			}
+			ComRecvCmd(hCom, "smartctl -a /dev/sda | awk '/Reallocated_Event_Count/ {print $NF}'", csRecv, "$");
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			if (TestIni.hwSpec.smart.Reallocated_Event_Count < atof(csRecv))
+			{
+				ShowUIMessage("SMART FAIL");
+				return -1;
+			}
+			ComRecvCmd(hCom, "smartctl -a /dev/sda | awk '/Current_Pending_Sector/ {print $NF}'", csRecv, "$");
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			if (TestIni.hwSpec.smart.Current_Pending_Sector < atof(csRecv))
+			{
+				ShowUIMessage("SMART FAIL");
+				return -1;
+			}
+			ComRecvCmd(hCom, "smartctl -a /dev/sda | awk '/Offline_Uncorrectable/ {print $NF}'", csRecv, "$");
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			if (TestIni.hwSpec.smart.Offline_Uncorrectable < atof(csRecv))
+			{
+				ShowUIMessage("SMART FAIL");
+				return -1;
+			}
+			ComRecvCmd(hCom, "smartctl -a /dev/sda | awk '/UDMA_CRC_Error_Count/ {print $NF}'", csRecv, "$");
+			GetCString(csRecv, "\r\n", "\r\n", csRecv);
+			if (TestIni.hwSpec.smart.UDMA_CRC_Error_Count < atof(csRecv))
+			{
+				ShowUIMessage("SMART FAIL");
+				return -1;
+			}
+			return 0;
+		}
 	}
-	else
-	{
-		GetCString(csRecv, "\r\n", "\r\n", csRecv);
-		csTemp.Format("SSD model:%s", csRecv);
-		ShowUIMessage(csTemp);
-		return 0;
-	}
+	ShowUIMessage("SSD model error");
+	return -1;
 }
 
 int FAN()

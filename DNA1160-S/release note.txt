@@ -92,10 +92,11 @@ ComRecvCmd(hCom, "killall -9 cat\r", s, "$");
 5.优化上传日志rename机制
 6.FT模式和测试小卡时，禁用MAC地址输入栏
 7.更新USB测项查找usb设备命令为ComRecvCmd(hCom, "fdisk -l |grep -v Disk | grep /dev | awk -F ' ' '{print($1)}'", csRecv, "$");
+8.NSK3300_MPCIE_LTE7430APAC_KIT，NSK3300_MPCIE_LTE7455NA测LTE
 
 
 
-
+PortNum=9
 
 
 

@@ -1,0 +1,33 @@
+
+
+20180119113427
+20180119113441
+PASS
+
+0010F35F0781;0010F35F0781
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+matching device(s) not found.
+Can't find comport!
+Com port COM3 founded!
+
+Current selected comport:3
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PT_FT: 0
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PT_FT: 0
+/ $
+DllVersion:1.0.1.12
+Date:2018-01-19 11:34:41
+Model:SG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Fri Jan 19 03:34:40 2018  0.000000 seconds
+/ $
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2018-01-19 11:34:41
+Total test time : 14 seconds.

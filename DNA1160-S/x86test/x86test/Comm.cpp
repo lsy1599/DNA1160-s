@@ -7,7 +7,33 @@
 //-------------------------------------------------------------------------------------------------------------------------
 
 //-------------------------------------------------------------------------------------------------------------------------
-
+BOOL GetCStrings(CString sourceStr, CString startSepStr, CString endSepStr, CString &resultStr, int num)
+{
+	CString str1;
+	int pos1 = 0, pos2 = 0;
+	if (num < 0)
+	{
+		return FALSE;
+	}
+	while (num--)
+	{
+		str1 = sourceStr;
+		if ((pos1 = str1.Find(startSepStr, 0)) == -1)
+			return FALSE;
+		sourceStr = sourceStr.Right(str1.GetLength() - pos1 - startSepStr.GetLength());
+	}
+	if ((pos2 = str1.Find(endSepStr, pos1 + startSepStr.GetLength())) == -1)
+	{
+		resultStr = "";
+		return FALSE;
+	}
+	resultStr = str1.Mid(pos1 + startSepStr.GetLength(), pos2 - (pos1 + startSepStr.GetLength()));
+	if (resultStr.GetLength() < 1)
+		return FALSE;
+	if (pos1 >= pos2 - 1)
+		return FALSE;
+	return TRUE;
+}
 BOOL CutCString(CString &sourceStr, CString startTargetStr)
 {
 	CString str1;
@@ -202,6 +228,31 @@ CString GetString(CString sourceStr,PSTR targetStr,char startChar,char endChar)
 
 	strBuf[strIndex]=NULL;
 	return strBuf;
+}
+
+bool Hex2Long(long long *macnum, char *str)
+{
+	int num[12] = {0};
+	for (int i = 0; i < 12; i++)
+	{
+		if ((str[i] >= '0') && (str[i] <= '9'))
+		{
+			num[i] = str[i] - '0';
+		}
+		else if ((str[i] >= 'a') && (str[i] <= 'f'))
+		{
+			num[i] = str[i] - ('a' - 10);
+		}
+		else if ((str[i] >= 'A') && (str[i] <= 'F'))
+		{
+			num[i] = str[i] - ('A' - 10);
+		}
+		else
+		{
+			return false;
+		}
+		*macnum += num[i] * pow(16, 11 - i);
+	}
 }
 
 bool Str2MAC(unsigned char *MAC, char *str)

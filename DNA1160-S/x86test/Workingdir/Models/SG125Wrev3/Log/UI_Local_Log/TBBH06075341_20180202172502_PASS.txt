@@ -1,0 +1,25 @@
+
+
+20180202172502
+20180202172547
+PASS
+
+;;
+
+
+DETAIL
+ModelName:SG125Wrev3
+Model:SG125Wrev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-02 17:25:47
+Model:SG125Wrev3
+=====TEST:CheckRTC=====
+hwclock
+Fri Feb  2 09:25:46 2018  0.000000 seconds
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2018-02-02 17:25:47
+Total test time : 45 seconds.

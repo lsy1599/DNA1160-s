@@ -1330,8 +1330,6 @@ void CInitDlg::OnBnClickedStacom()
 	// TODO: 在此添加控件通知处理程序代码
 }
 
-
-
 //tree ADD 
 
 void CInitDlg::UpdCheckboxState()//根据在 x86test.ini 文件中读取的各个测项在不同站点的状态（默认选中或未选中）来进行设置
@@ -1340,6 +1338,7 @@ void CInitDlg::UpdCheckboxState()//根据在 x86test.ini 文件中读取的各�
 	memset(CheckState_Null, 0, TESTITEMNUM);
 
 	int * pCheckState_Station= nullptr;
+
 	/*if (0 == TestIni.csStation.Compare("PT1"))
 	{
 		((CButton*)GetDlgItem(IDC_RADIO1))->SetCheck(1);
@@ -1384,20 +1383,24 @@ void CInitDlg::UpdCheckboxState()//根据在 x86test.ini 文件中读取的各�
 
 	((CButton*)GetDlgItem(IDC_CHECK_TestFwUpd))->EnableWindow(FALSE);
 	((CButton*)GetDlgItem(IDC_CHECK_ForOBA))->EnableWindow(FALSE);*/
-	//应该可以在此处来初始化设置站点 和 模式，用来为初始化时设置默认哪些测项被选中,,,,--------------------------------------------------------------
+
+	//应该可以在此处来初始化设置站点 和 模式，用来为初始化时设置默认哪些测项被选中--------------------------------------------------------------
 	//-----------------------------------------------------------------------------------------------
-	if (strModel == "NSK3300_MPCIE_LTE7455NA" || strModel == "NSK3300_MPCIE_S")
-	{
-		((CButton *)GetDlgItem(IDC_StationFT))->SetCheck(1);
-		((CButton *)GetDlgItem(IDC_StationPT))->SetCheck(0);
-		((CButton *)GetDlgItem(IDC_StationTemp))->SetCheck(0);
-		((CButton*)GetDlgItem(IDC_StationPT))->EnableWindow(FALSE);
-		((CButton*)GetDlgItem(IDC_StationTemp))->EnableWindow(FALSE);
-	}
-	else
-	{
-		((CButton *)GetDlgItem(IDC_StationPT))->SetCheck(1);
-	}
+	
+	//if (strModel == "NSK3300_MPCIE_LTE7455NA" || strModel == "NSK3300_MPCIE_S" || strModel == "NSK3300_MPCIE_LTE7430APAC_KIT")
+	//{
+	//	//((CButton *)GetDlgItem(IDC_StationFT))->SetCheck(1);
+	//	((CButton *)GetDlgItem(IDC_StationPT))->SetCheck(0);
+	//	((CButton *)GetDlgItem(IDC_StationTemp))->SetCheck(0);
+	//	((CButton*)GetDlgItem(IDC_StationPT))->EnableWindow(1);
+	//	((CButton*)GetDlgItem(IDC_StationTemp))->EnableWindow(FALSE);
+	//}
+	//else
+	//{
+	//	//((CButton *)GetDlgItem(IDC_StationPT))->SetCheck(1);
+	//}
+	((CButton *)GetDlgItem(IDC_StationPT))->SetCheck(1);
+	
 	//-----------------------------------------------------------------------------------------------
 	((CButton *)GetDlgItem(IDC_Model1))->SetCheck(1);
 	if (PT == GetCurStation())

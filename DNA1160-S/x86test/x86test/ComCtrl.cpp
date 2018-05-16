@@ -375,6 +375,9 @@ CString ComRecvCmd(HANDLE handle,CString csSend,CString &csRecv,CString csPrompt
 	{
 		if(i<600)
 		{
+			//CString s;
+			//s.Format("%d", i);
+			//ShowUIMessage(s);
 			ComRecv(handle, csTemp, TRUE);
 			csRecv+=csTemp;
 			if(-1 != csRecv.Find(csPrompt)) break;

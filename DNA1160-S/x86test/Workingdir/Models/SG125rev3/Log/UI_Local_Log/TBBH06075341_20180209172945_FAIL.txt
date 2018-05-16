@@ -1,0 +1,93 @@
+
+
+20180209172945
+20180209173101
+FAIL
+SATA
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-09 17:30:58
+Model:SG125rev3
+=====TEST:SetRTC=====
+System Time:5 02 09 09:30:58 2018
+date -s 2018.02.09-09:30:58
+Fri Feb  9 09:30:58 UTC 2018
+hwclock -w
+hwclock
+Fri Feb  9 09:30:58 2018  0.000000 seconds
+Time Interval:0 s
+RESULT: SetRTC PASS
+Date:2018-02-09 17:30:58
+DllVersion:1.0.2.12
+Date:2018-02-09 17:30:58
+Model:SG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Fri Feb  9 09:30:58 2018  0.000000 seconds
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2018-02-09 17:30:59
+DllVersion:1.0.2.12
+Date:2018-02-09 17:30:59
+Model:SG125rev3
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+[   32.977896] GobiNet: 2017-09-05/SWI_2.46
+[   32.981927] usbcore: registered new interface driver GobiNet
+insmod /usr/share/GobiSerial.ko
+[   33.602476] usbcore: registered new interface driver GobiSerial
+[   33.608440] usbserial: USB Serial support registered for GobiSerial
+[   33.615231] GobiSerial 1-3:1.0: GobiSerial converter detected
+[   33.621192] usb 1-3: GobiSerial converter now attached to ttyUSB0
+[   33.627760] GobiSerial 1-3:1.2: GobiSerial converter detected
+[   33.633713] usb 1-3: GobiSerial converter now attached to ttyUSB1
+[   33.640460] GobiSerial 1-3:1.3: GobiSerial converter detected
+[   33.646405] usb 1-3: GobiSerial converter now attached to ttyUSB2
+[   33.652547] GobiSerial: 2017-08-18/SWI_2.29:GobiSerial
+echo AT+CIMI > /dev/ttyUSB2
+/ $cat /dev/ttyUSB2 &
+[1] 236
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+IMEI:460028272090036
+RESULT: PCIE PASS
+Date:2018-02-09 17:31:00
+DllVersion:1.0.2.12
+Date:2018-02-09 17:31:00
+Model:SG125rev3
+=====TEST:M2_ssd=====
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+[1]+  Killed                  cat /dev/ttyUSB2
+SSD model:     64GB SATA Flash Drive
+SSD model error
+Date:2018-02-09 17:31:00
+Model:SG125rev3
+=====TEST:M2_ssd=====
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+SSD model:     64GB SATA Flash Drive
+SSD model error
+RESULT: M2_ssd FAIL
+Date:2018-02-09 17:31:00
+Total test time : 76 seconds.

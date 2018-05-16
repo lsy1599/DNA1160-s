@@ -45,6 +45,17 @@ typedef struct Range
 	double minval;
 	double fval;
 }volRange;
+
+typedef struct SMART
+{
+	double Power_On_Hours;
+	double Reallocated_Sector_Ct;
+	double Reallocated_Event_Count;
+	double Current_Pending_Sector;
+	double Offline_Uncorrectable;
+	double UDMA_CRC_Error_Count;
+	
+}Smart;
 typedef struct HWM
 {
 	volRange SYSTemp2;
@@ -62,6 +73,7 @@ typedef struct HWM
 	volRange CPUFAN;
 	volRange SystemFANFullSpeed;
 	volRange MemSize;
+	Smart	 smart;
 }HWMSpec;
 
 typedef struct _TEST_ITEM_LIST

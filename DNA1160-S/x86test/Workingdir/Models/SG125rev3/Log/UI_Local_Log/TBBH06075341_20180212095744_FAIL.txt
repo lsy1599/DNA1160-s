@@ -1,0 +1,17 @@
+
+
+20180212095744
+20180212095911
+FAIL
+
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+matching device(s) not found.
+Enter into board linux system mode fail
+Total test time : 87 seconds.

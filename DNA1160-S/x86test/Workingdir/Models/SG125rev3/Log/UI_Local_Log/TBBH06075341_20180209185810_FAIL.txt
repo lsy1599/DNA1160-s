@@ -1,0 +1,58 @@
+
+
+20180209185810
+20180209185857
+FAIL
+SATA
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-09 18:58:55
+Model:SG125rev3
+=====TEST:PCIE=====
+0
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+0
+insmod /usr/share/GobiNet.ko
+insmod: can't insert '/usr/share/GobiNet.ko': File exists
+0
+insmod /usr/share/GobiSerial.ko
+insmod: can't insert '/usr/share/GobiSerial.ko': File exists
+0
+echo AT+CIMI > /dev/ttyUSB2
+/ $cat /dev/ttyUSB2 &
+[1] 248
+460028272090036
+OK
+IMEI:460028272090036
+RESULT: PCIE PASS
+Date:2018-02-09 18:58:57
+DllVersion:1.0.2.12
+Date:2018-02-09 18:58:57
+Model:SG125rev3
+=====TEST:M2_ssd=====
+0
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+[1]+  Killed                  cat /dev/ttyUSB2
+SSD model:     64GB SATA Flash Drive
+SSD model error
+Date:2018-02-09 18:58:57
+Model:SG125rev3
+=====TEST:M2_ssd=====
+0
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+SSD model:     64GB SATA Flash Drive
+SSD model error
+RESULT: M2_ssd FAIL
+Date:2018-02-09 18:58:57
+Total test time : 47 seconds.

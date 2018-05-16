@@ -1,0 +1,97 @@
+
+
+20180212101853
+20180212102007
+FAIL
+SATA
+0010F35F0781;0010F35F0789
+
+
+DETAIL
+ModelName:SG125rev3
+Model:SG125rev3
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-12 10:20:04
+Model:SG125rev3
+=====TEST:SetRTC=====
+System Time:1 02 12 02:20:04 2018
+date -s 2018.02.12-02:20:04
+Mon Feb 12 02:20:04 UTC 2018
+hwclock -w
+hwclock
+Mon Feb 12 02:20:04 2018  0.000000 seconds
+Time Interval:-1 s
+RESULT: SetRTC PASS
+Date:2018-02-12 10:20:05
+DllVersion:1.0.2.12
+Date:2018-02-12 10:20:05
+Model:SG125rev3
+=====TEST:CheckRTC=====
+hwclock
+Mon Feb 12 02:20:04 2018  0.000000 seconds
+Time Interval:-1 s
+RESULT: CheckRTC PASS
+Date:2018-02-12 10:20:05
+DllVersion:1.0.2.12
+Date:2018-02-12 10:20:05
+Model:SG125rev3
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+[   31.456077] GobiNet: 2017-09-05/SWI_2.46
+[   31.460815] GobiNet 1-3:1.8 eth9: register 'GobiNet' at usb-0000:00:15.0-3, GobiNet Ethernet Device, 2a:4f:2d:83:ae:4e
+[   31.471861] USB Speed : USB 2.0
+[   31.475654] GobiNet 1-3:1.10 eth10: register 'GobiNet' at usb-0000:00:15.0-3, GobiNet Ethernet Device, 2a:4f:2d:83:ae:4e
+[   31.486913] USB Speed : USB 2.0
+[   31.490108] usbcore: registered new interface driver GobiNet
+insmod /usr/share/GobiSerial.ko
+[   32.114019] usbcore: registered new interface driver GobiSerial
+[   32.120018] usbserial: USB Serial support registered for GobiSerial
+[   32.126755] GobiSerial 1-3:1.0: GobiSerial converter detected
+[   32.132644] usb 1-3: GobiSerial converter now attached to ttyUSB0
+[   32.139243] GobiSerial 1-3:1.2: GobiSerial converter detected
+[   32.145111] usb 1-3: GobiSerial converter now attached to ttyUSB1
+[   32.151826] GobiSerial 1-3:1.3: GobiSerial converter detected
+[   32.157699] usb 1-3: GobiSerial converter now attached to ttyUSB2
+[   32.163839] GobiSerial: 2017-08-18/SWI_2.29:GobiSerial
+echo AT+CIMI > /dev/ttyUSB2
+lte.log &
+cat /tmp/lte.log
+/ $cat /dev/ttyUSB2 > /tmp/lte.log &
+[1] 235
+/ $cat /tmp/lte.log
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+IMEI:460028272090036
+RESULT: PCIE PASS
+Date:2018-02-12 10:20:06
+DllVersion:1.0.2.12
+Date:2018-02-12 10:20:06
+Model:SG125rev3
+=====TEST:M2_ssd=====
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+[1]+  Killed                  cat /dev/ttyUSB2 > /tmp/lte.log
+SSD model:     64GB SATA Flash Drive
+SSD model error
+Date:2018-02-12 10:20:06
+Model:SG125rev3
+=====TEST:M2_ssd=====
+smartctl -i /dev/sda | awk -F':' '/Device Model:/ {print $2}'
+64GB SATA Flash Drive
+SSD model:     64GB SATA Flash Drive
+SSD model error
+RESULT: M2_ssd FAIL
+Date:2018-02-12 10:20:07
+Total test time : 74 seconds.

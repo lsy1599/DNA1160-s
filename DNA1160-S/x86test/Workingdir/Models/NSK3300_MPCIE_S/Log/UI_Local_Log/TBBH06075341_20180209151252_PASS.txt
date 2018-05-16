@@ -1,0 +1,53 @@
+
+
+20180209151252
+20180209151340
+PASS
+
+;
+
+
+DETAIL
+ModelName:NSK3300_MPCIE_S
+Model:NSK3300_MPCIE_S
+DLL initialize complete.
+Please insert DUT...
+Current selected comport:3
+DllVersion:1.0.2.12
+Date:2018-02-09 15:13:38
+Model:NSK3300_MPCIE_S
+=====TEST:PCIE=====
+lspci -s 09:00.0
+09:00.0 Class 0280: Device 168c:003c
+insmod /usr/share/GobiNet.ko
+[   67.533471] GobiNet: 2017-09-05/SWI_2.46
+[   67.537494] usbcore: registered new interface driver GobiNet
+insmod /usr/share/GobiSerial.ko
+[   68.169366] usbcore: registered new interface driver GobiSerial
+[   68.175335] usbserial: USB Serial support registered for GobiSerial
+[   68.182081] GobiSerial 1-3:1.0: GobiSerial converter detected
+[   68.188011] usb 1-3: GobiSerial converter now attached to ttyUSB0
+[   68.194559] GobiSerial 1-3:1.2: GobiSerial converter detected
+[   68.200505] usb 1-3: GobiSerial converter now attached to ttyUSB1
+[   68.207207] GobiSerial 1-3:1.3: GobiSerial converter detected
+[   68.213154] usb 1-3: GobiSerial converter now attached to ttyUSB2
+[   68.219295] GobiSerial: 2017-08-18/SWI_2.29:GobiSerial
+echo AT+CIMI > /dev/ttyUSB2
+/ $cat /dev/ttyUSB2 &
+[1] 230
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+AT+CIMI
+460028272090036
+OK
+IMEI:460028272090036
+RESULT: PCIE PASS
+Date:2018-02-09 15:13:39
+Total test time : 47 seconds.
